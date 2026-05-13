@@ -1,14 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 
 import React, {useState} from 'react';
-import {
-  Image,
-  Platform,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {Image, Platform, Pressable, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
@@ -61,7 +54,7 @@ const Sportyritcountddownwlcm = () => {
     SPORTYRITCOUNTDDOWN_WLCM_STEPS[sportyritcountddownStep];
 
   const sportyritcountddownGoMain = () => {
-    sportyritcountddownNavigation.navigate('Sportyritcountddowntabs' as never);
+    sportyritcountddownNavigation.replace('Sportyritcountddowntabs' as never);
   };
 
   const sportyritcountddownOnPrimary = () => {

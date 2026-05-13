@@ -1,4 +1,5 @@
 import {
+  CommonActions,
   useFocusEffect,
   useNavigation,
   useRoute,
@@ -117,7 +118,12 @@ const Sportyritcountddowneventdetail = () => {
                 e => e.id !== sportyritcountddownEventId,
               ),
             );
-            sportyritcountddownNavigation.popToTop();
+            sportyritcountddownNavigation.dispatch(
+              CommonActions.reset({
+                index: 0,
+                routes: [{name: 'Sportyritcountddowntabs'}],
+              }),
+            );
           },
         },
       ],

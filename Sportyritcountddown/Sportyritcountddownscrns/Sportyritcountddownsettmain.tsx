@@ -3,6 +3,7 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useCallback, useEffect, useState} from 'react';
 import {
   Image,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -16,6 +17,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import type {SportyritcountddownSettMainNav} from '../Sportyritcountddownroutes/sportyritcountddownrootparamlist';
 import {SPORTYRITCOUNTDOWN_PUSH_KEY} from '../Sportyritcountddowndata/sportyritcountddownnotificationprefs';
+import Sportyritcountddownlayout from '../Sportyritcountddowncompnts/Sportyritcountddownlayout';
 
 const Sportyritcountddownsettmain = () => {
   const sportyritcountddownNavigation =
@@ -74,7 +76,7 @@ const Sportyritcountddownsettmain = () => {
   );
 
   return (
-    <View style={styles.sportyritcountddownRoot}>
+    <Sportyritcountddownlayout scrollable={false}>
       <View
         style={[
           styles.sportyritcountddownHeaderBlock,
@@ -86,13 +88,11 @@ const Sportyritcountddownsettmain = () => {
         </Text>
       </View>
 
-      <ScrollView
-        style={styles.sportyritcountddownScrollFill}
-        contentContainerStyle={[
+      <View
+        style={[
           styles.sportyritcountddownScrollContent,
           {paddingBottom: sportyritcountddownTabPadBottom},
-        ]}
-        showsVerticalScrollIndicator={false}>
+        ]}>
         <Text style={styles.sportyritcountddownSectionLabel}>
           NOTIFICATIONS
         </Text>
@@ -121,7 +121,7 @@ const Sportyritcountddownsettmain = () => {
         </View>
 
         <Text style={styles.sportyritcountddownSectionLabel}>
-          ABOUT & SUPPORT
+          {Platform.OS === 'ios' ? 'ABOUT & SUPPORT' : 'ABOUT'}
         </Text>
         <View style={styles.sportyritcountddownCard}>
           <SportyritcountddownsettRow
@@ -132,35 +132,42 @@ const Sportyritcountddownsettmain = () => {
             subtitle={undefined}
             title="About Sporty Roo"
           />
-          <SportyritcountddownsettRow
-            bottomBorder
-            iconBg="#22C55E20"
-            iconImage={require('../../assets/i/sportyritcoscnxtpr.png')}
-            onPress={() => sportyritcountddownGoPlaceholder('Privacy Policy')}
-            subtitle="How we handle your data"
-            title="Privacy Policy"
-          />
-          <SportyritcountddownsettRow
-            bottomBorder
-            iconBg="#F5B80020"
-            iconImage={require('../../assets/i/sportyritcoscnxtra.png')}
-            onPress={() => sportyritcountddownGoPlaceholder('Rate the App')}
-            subtitle="Love Sporty Roo? Tell us!"
-            title="Rate the App"
-          />
-          <SportyritcountddownsettRow
-            bottomBorder={false}
-            iconBg="#A855F720"
-            iconImage={require('../../assets/i/sportyritcoscnxtshr.png')}
-            onPress={() =>
-              sportyritcountddownGoPlaceholder('Share with Friends')
-            }
-            subtitle="Spread the sports love"
-            title="Share with Friends"
-          />
+          {Platform.OS === 'ios' && (
+            <>
+              {' '}
+              <SportyritcountddownsettRow
+                bottomBorder
+                iconBg="#22C55E20"
+                iconImage={require('../../assets/i/sportyritcoscnxtpr.png')}
+                onPress={() =>
+                  sportyritcountddownGoPlaceholder('Privacy Policy')
+                }
+                subtitle="How we handle your data"
+                title="Privacy Policy"
+              />
+              <SportyritcountddownsettRow
+                bottomBorder
+                iconBg="#F5B80020"
+                iconImage={require('../../assets/i/sportyritcoscnxtra.png')}
+                onPress={() => sportyritcountddownGoPlaceholder('Rate the App')}
+                subtitle="Love Sporty Roo? Tell us!"
+                title="Rate the App"
+              />
+              <SportyritcountddownsettRow
+                bottomBorder={false}
+                iconBg="#A855F720"
+                iconImage={require('../../assets/i/sportyritcoscnxtshr.png')}
+                onPress={() =>
+                  sportyritcountddownGoPlaceholder('Share with Friends')
+                }
+                subtitle="Spread the sports love"
+                title="Share with Friends"
+              />
+            </>
+          )}
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </Sportyritcountddownlayout>
   );
 };
 

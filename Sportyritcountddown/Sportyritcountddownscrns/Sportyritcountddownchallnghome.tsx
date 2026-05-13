@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
     width: '96%',
     borderRadius: 18,
     overflow: 'hidden',
+    marginBottom: 30,
   },
   sportyritcountddownCtaGrad: {
     flexDirection: 'row',

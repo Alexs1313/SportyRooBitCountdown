@@ -441,6 +441,7 @@ const styles = StyleSheet.create({
   },
   sportyritcountddownOptions: {
     gap: 12,
+    marginBottom: 30,
   },
   sportyritcountddownOptionRow: {
     flexDirection: 'row',

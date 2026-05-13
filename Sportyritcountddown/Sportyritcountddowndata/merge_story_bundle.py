@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """One-off merge of story text files + facts into sportyritcountddownstories.bundle.json"""
 import json
 from pathlib import Path
