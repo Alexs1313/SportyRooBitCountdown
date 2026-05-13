@@ -27,6 +27,7 @@ import {
   sportyritcountddownSaveSavedGreetings,
 } from '../Sportyritcountddowndata/sportyritcountddowngreetingstorage';
 import {sportyritcountddownToastShowIfEnabled} from '../Sportyritcountddowndata/sportyritcountddownnotificationprefs';
+import Sportyritcountddownlayout from '../Sportyritcountddowncompnts/Sportyritcountddownlayout';
 
 const sportyritcountddownGreetingStyleOrder: SportyritcountddownGreetingStyle[] =
   ['Motivational', 'Friendly', 'Humorous', 'Formal', 'Epic'];
@@ -485,7 +486,7 @@ const Sportyritcountddowngreetn = () => {
   };
 
   return (
-    <View style={styles.sportyritcountddownRoot}>
+    <Sportyritcountddownlayout>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         style={styles.sportyritcountddownFlex}>
@@ -515,7 +516,7 @@ const Sportyritcountddowngreetn = () => {
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
-    </View>
+    </Sportyritcountddownlayout>
   );
 };
 

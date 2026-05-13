@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.sportyroobitcountdown"
+    namespace "com.sporty.roo.countdown"
     defaultConfig {
-        applicationId "com.sportyroobitcountdown"
+        applicationId "com.sporty.roo.countdown"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,5 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Sportyritcountddownlayout = ({
   children,
@@ -10,14 +11,16 @@ const Sportyritcountddownlayout = ({
   bounces?: boolean;
 }) => {
   return (
-    <View style={styles.cozyrabtteacorneercontainer}>
+    <LinearGradient
+      colors={['rgb(81, 6, 143)', 'rgb(20, 4, 33)', 'rgb(4, 1, 12)']}
+      style={styles.cozyrabtteacorneercontainer}>
       <ScrollView
         bounces={bounces}
         contentContainerStyle={styles.cozyrabtteacorneerscrollContent}
         showsVerticalScrollIndicator={false}>
         {children}
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -26,7 +29,6 @@ export default Sportyritcountddownlayout;
 const styles = StyleSheet.create({
   cozyrabtteacorneercontainer: {
     flex: 1,
-    backgroundColor: '#0d0620',
   },
   cozyrabtteacorneerscrollContent: {
     flexGrow: 1,

@@ -1,4 +1,4 @@
-package com.sportyroobitcountdown
+package com.sporty.roo.countdown
 
 import android.app.Application
 import com.facebook.react.PackageList
