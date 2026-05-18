@@ -39,7 +39,7 @@ const ChallengeHomeScreen = () => {
           source={require('../../assets/i/sportyritcoscchal.png')}
           style={styles.hero}
         />
-        <Text style={styles.headline}>Sporty Roo Challenges You!</Text>
+        <Text style={styles.headline}>Challenge You!</Text>
         <Text style={styles.body}>
           Answer sport questions, build your score, and sharpen your game
           knowledge
