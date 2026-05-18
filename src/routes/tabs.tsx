@@ -58,8 +58,7 @@ const TabAnimatedButton = (props: Record<string, unknown>) => {
       onPressOut={handlePressOut}
       style={[style as ViewStyle, styles.button]}
       {...rest}>
-      <Animated.View
-        style={[styles.buttonInner, {transform: [{scale}]}]}>
+      <Animated.View style={[styles.buttonInner, {transform: [{scale}]}]}>
         {children as React.ReactNode}
       </Animated.View>
     </Pressable>
@@ -207,27 +206,43 @@ const MainTabs = () => {
 const styles = StyleSheet.create({
   labelFocused: {
     color: colors.gold,
+
     fontSize: 9,
+
     fontWeight: '700',
+
     marginTop: 6,
+
     textAlign: 'center',
   },
   iconImageWrap: {
     alignItems: 'center',
+
     justifyContent: 'center',
   },
   bar: {
     elevation: 0,
+
     paddingTop: 10,
+
     justifyContent: 'center',
+
     position: 'absolute',
+
     paddingHorizontal: 10,
+
     borderColor: colors.border,
+
     borderTopWidth: 1,
+
     borderTopColor: colors.border,
+
     backgroundColor: 'transparent',
+
     height: 90,
+
     paddingBottom: 20,
+
     overflow: 'hidden',
   },
   button: {
@@ -235,18 +250,25 @@ const styles = StyleSheet.create({
   },
   buttonInner: {
     flex: 1,
+
     alignItems: 'center',
+
     justifyContent: 'center',
   },
   iconWrap: {
     alignItems: 'center',
+
     justifyContent: 'center',
+
     width: 54,
   },
   label: {
     fontSize: 9,
+
     fontWeight: '700',
+
     marginTop: 6,
+
     textAlign: 'center',
   },
   labelIdle: {

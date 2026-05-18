@@ -23,11 +23,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {gradients} from '../themes';
-import {
-  formatDateLabel,
-  getCountdownParts,
-  parseDateKey,
-} from '../utils';
+import {formatDateLabel, getCountdownParts, parseDateKey} from '../utils';
 import type {Event} from '../data/eventTypes';
 import {loadEvents, saveEvents} from '../data/eventStorage';
 import type {RootParamList} from '../routes/rootParamList';
@@ -252,140 +248,210 @@ export default EventDetailScreen;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+
     backgroundColor: '#0d0620',
   },
   center: {
     alignItems: 'center',
+
     justifyContent: 'center',
   },
   missing: {
     color: '#f0e8ff',
+
     fontSize: 16,
+
     marginBottom: 12,
   },
   backLink: {
     color: '#a855f7',
+
     fontSize: 16,
+
     fontWeight: '600',
   },
   heroWrap: {
     width: '100%',
+
     height: 280,
   },
   heroImg: {
     flex: 1,
+
     justifyContent: 'space-between',
   },
   backBtn: {
     position: 'absolute',
+
     left: 16,
+
     backgroundColor: '#1A0D3A',
+
     paddingHorizontal: 12,
+
     paddingVertical: 8,
+
     borderRadius: 12,
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     flexDirection: 'row',
+
     alignItems: 'center',
+
     gap: 8,
   },
   backTxt: {
     color: '#f0e8ff',
+
     fontSize: 15,
+
     fontWeight: '600',
   },
   heroTitleBox: {
     padding: 20,
+
     paddingBottom: 24,
+
     position: 'absolute',
+
     left: 5,
+
     bottom: 20,
   },
   heroTitle: {
     color: '#f0e8ff',
+
     fontSize: 22,
+
     fontWeight: '800',
+
     lineHeight: 28,
   },
   body: {
     paddingHorizontal: 16,
+
     gap: 14,
+
     marginTop: -12,
   },
   timerCard: {
     backgroundColor: '#1a0d3a',
+
     borderRadius: 16,
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     padding: 20,
   },
   timerLbl: {
     color: '#8b7baa',
+
     fontSize: 11,
+
     fontWeight: '700',
+
     letterSpacing: 1,
+
     marginBottom: 12,
+
     textAlign: 'center',
   },
   bigRow: {
     flexDirection: 'row',
+
     gap: 10,
+
     marginBottom: 12,
   },
   bigCell: {
     flex: 1,
+
     backgroundColor: '#231550',
+
     borderRadius: 12,
+
     alignItems: 'center',
+
     paddingVertical: 12,
 
     borderWidth: 1,
+
     borderColor: '#7B2FBE60',
   },
   bigNum: {
     color: '#a855f7',
+
     fontSize: 28,
+
     fontWeight: '900',
   },
   bigHint: {
     color: '#8b7baa',
+
     fontSize: 12,
+
     marginTop: 4,
+
     fontWeight: '500',
   },
   smallRow: {
     flexDirection: 'row',
+
     gap: 10,
+
     justifyContent: 'center',
   },
   smallCell: {
     minWidth: 90,
+
     flexDirection: 'row',
+
     alignItems: 'center',
+
     justifyContent: 'center',
+
     gap: 8,
+
     backgroundColor: '#231550',
+
     borderRadius: 12,
+
     paddingVertical: 12,
   },
   smallNum: {
     color: '#a855f7',
+
     fontSize: 20,
+
     fontWeight: '800',
   },
   smallLbl: {
     color: '#8b7baa',
+
     fontSize: 13,
+
     fontWeight: '600',
   },
   infoCard: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     gap: 12,
+
     backgroundColor: '#1a0d3a',
+
     borderRadius: 16,
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     padding: 16,
   },
   calEmoji: {
@@ -393,101 +459,152 @@ const styles = StyleSheet.create({
   },
   infoLbl: {
     color: '#8b7baa',
+
     fontSize: 12,
+
     fontWeight: '600',
   },
   infoVal: {
     color: '#f0e8ff',
+
     fontSize: 17,
+
     fontWeight: '700',
+
     marginTop: 4,
   },
   about: {
     backgroundColor: '#1a0d3a',
+
     borderRadius: 16,
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     padding: 16,
   },
   aboutLbl: {
     color: '#8b7baa',
+
     fontSize: 11,
+
     fontWeight: '700',
+
     letterSpacing: 1,
+
     marginBottom: 8,
   },
   aboutTxt: {
     color: '#f0e8ff',
+
     fontSize: 15,
+
     lineHeight: 22,
   },
   row2: {
     flexDirection: 'row',
+
     gap: 12,
   },
   half: {
     flex: 1,
+
     flexDirection: 'row',
+
     alignItems: 'center',
+
     justifyContent: 'center',
+
     gap: 8,
+
     backgroundColor: '#1a0d3a',
+
     borderRadius: 14,
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     paddingVertical: 14,
   },
   shareIco: {
     color: '#a855f7',
+
     fontSize: 18,
+
     fontWeight: '700',
   },
   shareLbl: {
     color: '#a855f7',
+
     fontSize: 15,
+
     fontWeight: '700',
   },
   editIco: {
     color: '#f5b800',
+
     fontSize: 18,
+
     fontWeight: '700',
   },
   editLbl: {
     color: '#f5b800',
+
     fontSize: 15,
+
     fontWeight: '700',
   },
   greetOuter: {
     borderRadius: 16,
+
     overflow: 'hidden',
   },
   greetGrad: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     justifyContent: 'center',
+
     gap: 8,
+
     height: 50,
   },
   greetTxt: {
     color: '#FFFFFF',
+
     fontSize: 16,
+
     fontWeight: '800',
   },
   delete: {
     borderRadius: 16,
+
     borderWidth: 1,
+
     borderColor: '#5A1520',
+
     height: 50,
+
     alignItems: 'center',
+
     backgroundColor: '#1A0D3A',
+
     marginBottom: 8,
+
     flexDirection: 'row',
+
     justifyContent: 'center',
+
     gap: 8,
   },
   deleteTxt: {
     color: '#EF4444',
+
     fontSize: 16,
+
     fontWeight: '600',
   },
 });

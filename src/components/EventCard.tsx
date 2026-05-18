@@ -12,11 +12,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import type {Event} from '../data/eventTypes';
 import {colors, gradients} from '../themes';
-import {
-  formatDateLabel,
-  getCountdownParts,
-  parseDateKey,
-} from '../utils';
+import {formatDateLabel, getCountdownParts, parseDateKey} from '../utils';
 
 type EventCardProps = {
   event: Event;
@@ -117,9 +113,13 @@ export default EventCard;
 const styles = StyleSheet.create({
   cardOuter: {
     borderRadius: 20,
+
     overflow: 'hidden',
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     marginBottom: 14,
   },
   cardPressed: {
@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
   },
   cardBg: {
     minHeight: 211,
+
     width: '100%',
   },
   cardImageStyle: {
@@ -135,10 +136,12 @@ const styles = StyleSheet.create({
   cardTint: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(26, 13, 58, 0.82)',
+
     borderRadius: 20,
   },
   accentBar: {
     height: 6,
+
     width: '100%',
   },
   accentBarPurple: {
@@ -146,31 +149,45 @@ const styles = StyleSheet.create({
   },
   cardInner: {
     paddingHorizontal: 16,
+
     paddingTop: 16,
+
     paddingBottom: 14,
+
     flex: 1,
   },
   topRow: {
     flexDirection: 'row',
+
     justifyContent: 'space-between',
+
     alignItems: 'flex-start',
   },
   titleCol: {
     flex: 1,
+
     paddingRight: 12,
+
     maxWidth: '72%',
   },
   title: {
     color: '#f0e8ff',
+
     fontSize: 15,
+
     fontWeight: '700',
+
     lineHeight: 22.5,
+
     letterSpacing: -0.23,
   },
   dateRow: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     marginTop: 4,
+
     gap: 4,
   },
   cal: {
@@ -178,55 +195,84 @@ const styles = StyleSheet.create({
   },
   date: {
     color: '#8b7baa',
+
     fontSize: 12,
+
     fontWeight: '500',
   },
   daysCol: {
     alignItems: 'flex-end',
+
     minWidth: 64,
   },
   bigDays: {
     fontSize: 28,
+
     fontWeight: '900',
+
     lineHeight: 28,
+
     letterSpacing: 0.38,
   },
   daysHint: {
     marginTop: 2,
+
     color: '#8b7baa',
+
     fontSize: 11,
+
     fontWeight: '600',
+
     letterSpacing: 0.56,
+
     textTransform: 'uppercase',
   },
   chipsRow: {
     flexDirection: 'row',
+
     gap: 12,
+
     marginTop: 18,
+
     paddingTop: 13,
+
     borderTopWidth: 1,
+
     borderTopColor: '#231550',
   },
   chip: {
     flex: 1,
+
     backgroundColor: '#231550',
+
     borderRadius: 10,
+
     paddingTop: 6,
+
     paddingHorizontal: 10,
+
     paddingBottom: 8,
+
     alignItems: 'center',
   },
   chipNum: {
     color: '#f0e8ff',
+
     fontSize: 14,
+
     fontWeight: '700',
+
     letterSpacing: -0.15,
   },
   chipLbl: {
     marginTop: 2,
+
     color: '#8b7baa',
+
     fontSize: 10,
+
     fontWeight: '500',
+
     letterSpacing: 0.12,
   },
   badgeWrap: {
@@ -234,18 +280,28 @@ const styles = StyleSheet.create({
   },
   badge: {
     alignSelf: 'flex-start',
+
     backgroundColor: '#1a0650',
+
     borderWidth: 1,
+
     borderColor: '#3d1b9a',
+
     borderRadius: 20,
+
     paddingHorizontal: 11,
+
     paddingVertical: 4,
   },
   badgeTxt: {
     color: '#a855f7',
+
     fontSize: 10,
+
     fontWeight: '700',
+
     letterSpacing: 0.62,
+
     textTransform: 'uppercase',
   },
 });

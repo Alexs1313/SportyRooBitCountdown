@@ -1,9 +1,6 @@
 import type {GreetingStyle} from './greetingTypes';
 
-export const greetingTemplates: Record<
-  GreetingStyle,
-  readonly string[]
-> = {
+export const greetingTemplates: Record<GreetingStyle, readonly string[]> = {
   Motivational: [
     '{recipient}, your {event} is more than a date on the calendar — it is a chance to show your focus, strength, and determination. Keep believing in your effort and give this moment everything you have.',
     'This is your time, {recipient}. The road to {event} may not be easy, but every step, every practice, and every challenge has prepared you for this moment. Go forward with confidence.',
@@ -20,8 +17,8 @@ export const greetingTemplates: Record<
   ],
   Friendly: [
     'Hey {recipient}, wishing you an amazing {event}! Enjoy every moment, have fun, and remember that this day is part of your sport story.',
-    'Good luck with {event}, {recipient}! I hope it brings you energy, excitement, and a reason to smile. You\'ve got this!',
-    '{recipient}, I\'m cheering for you as {event} comes closer. Have a great time, enjoy the experience, and make it a moment to remember.',
+    "Good luck with {event}, {recipient}! I hope it brings you energy, excitement, and a reason to smile. You've got this!",
+    "{recipient}, I'm cheering for you as {event} comes closer. Have a great time, enjoy the experience, and make it a moment to remember.",
     'Wishing you the best for {event}, {recipient}! May the day be full of good energy, strong moments, and great memories.',
     'Hey {recipient}, may {event} be exciting, successful, and full of positive emotions. Go enjoy it and make the most of every second.',
     '{recipient}, I hope {event} brings you confidence, joy, and a little bit of sport magic. Have fun and keep your spirit high!',
@@ -29,8 +26,8 @@ export const greetingTemplates: Record<
     'Good luck, {recipient}! I hope {event} brings you excitement, confidence, and plenty of reasons to smile.',
     '{recipient}, I hope your {event} is full of good energy, strong moments, and happy memories. Have fun and enjoy every part of it!',
     'Wishing you the best for {event}, {recipient}. May it be exciting, meaningful, and full of great sport spirit.',
-    'Hey {recipient}, your {event} is here to be enjoyed. Stay relaxed, give it your best, and remember that I\'m cheering for you.',
-    '{recipient}, may {event} bring you joy, motivation, and a moment you\'ll want to remember for a long time.',
+    "Hey {recipient}, your {event} is here to be enjoyed. Stay relaxed, give it your best, and remember that I'm cheering for you.",
+    "{recipient}, may {event} bring you joy, motivation, and a moment you'll want to remember for a long time.",
   ],
   Humorous: [
     '{recipient}, good luck with {event}! May your energy be high, your mistakes be tiny, and your victory pose already practiced in the mirror.',

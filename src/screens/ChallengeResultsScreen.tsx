@@ -27,23 +27,17 @@ type ChallengeResultsNav = NativeStackNavigationProp<
   'ChallengeResults'
 >;
 
-type ChallengeResultsRoute = RouteProp<
-  RootParamList,
-  'ChallengeResults'
->;
+type ChallengeResultsRoute = RouteProp<RootParamList, 'ChallengeResults'>;
 
 const ChallengeResultsScreen = () => {
-  const navigation =
-    useNavigation<ChallengeResultsNav>();
-  const route =
-    useRoute<ChallengeResultsRoute>();
+  const navigation = useNavigation<ChallengeResultsNav>();
+  const route = useRoute<ChallengeResultsRoute>();
   const insets = useSafeAreaInsets();
 
   const {score, outcomes} = route.params;
 
   const [best, setBest] = useState(0);
-  const [newRecord, setNewRecord] =
-    useState(false);
+  const [newRecord, setNewRecord] = useState(false);
 
   const tabPadBottom = tabBarPadding(insets.bottom);
 
@@ -51,22 +45,15 @@ const ChallengeResultsScreen = () => {
     let active = true;
     (async () => {
       try {
-        const raw = await AsyncStorage.getItem(
-          STORAGE_KEYS.quizBestScore,
-        );
-        const prev = raw
-          ? parseInt(raw, 10)
-          : 0;
+        const raw = await AsyncStorage.getItem(STORAGE_KEYS.quizBestScore);
+        const prev = raw ? parseInt(raw, 10) : 0;
         if (!active) {
           return;
         }
         setBest(prev);
         if (score > prev) {
           setNewRecord(true);
-          await AsyncStorage.setItem(
-            STORAGE_KEYS.quizBestScore,
-            String(score),
-          );
+          await AsyncStorage.setItem(STORAGE_KEYS.quizBestScore, String(score));
           setBest(score);
         }
       } catch {
@@ -120,9 +107,7 @@ const ChallengeResultsScreen = () => {
         <View style={styles.headerTop}>
           <View style={styles.titleWrap}>
             <Text style={screenStyles.eyebrow}>QUIZ RESULTS</Text>
-            <Text style={screenStyles.screenTitle}>
-              Results 🏆
-            </Text>
+            <Text style={screenStyles.screenTitle}>Results 🏆</Text>
           </View>
         </View>
       </View>
@@ -133,13 +118,9 @@ const ChallengeResultsScreen = () => {
           styles.scrollBodyTop,
           {paddingBottom: tabPadBottom},
         ]}>
-        <Text style={styles.medalEmoji}>
-          {medal}
-        </Text>
+        <Text style={styles.medalEmoji}>{medal}</Text>
         {newRecord ? (
-          <Text style={styles.newRecord}>
-            🎉 New Record!
-          </Text>
+          <Text style={styles.newRecord}>🎉 New Record!</Text>
         ) : null}
 
         <View style={styles.scoreCard}>
@@ -153,18 +134,13 @@ const ChallengeResultsScreen = () => {
               colors={['#facc15', '#7b2fbe']}
               end={{x: 1, y: 0}}
               start={{x: 0, y: 0}}
-              style={[
-                styles.barFill,
-                {width: progressWidth},
-              ]}
+              style={[styles.barFill, {width: progressWidth}]}
             />
           </View>
         </View>
 
         <View style={styles.reviewCard}>
-          <Text style={styles.reviewTitle}>
-            Question Review
-          </Text>
+          <Text style={styles.reviewTitle}>Question Review</Text>
           <View style={styles.grid}>
             {outcomes.map((o, i) => {
               const border =
@@ -179,12 +155,7 @@ const ChallengeResultsScreen = () => {
                   : o === 'wrong'
                   ? '#3A0D0D'
                   : '#2D1B69';
-              const sym =
-                o === 'correct'
-                  ? '✓'
-                  : o === 'wrong'
-                  ? '✗'
-                  : '⏱';
+              const sym = o === 'correct' ? '✓' : o === 'wrong' ? '✗' : '⏱';
               return (
                 <View
                   key={i}
@@ -195,52 +166,27 @@ const ChallengeResultsScreen = () => {
                       backgroundColor: cellBg,
                     },
                   ]}>
-                  <Text style={styles.cellTxt}>
-                    {sym}
-                  </Text>
+                  <Text style={styles.cellTxt}>{sym}</Text>
                 </View>
               );
             })}
           </View>
           <View style={styles.legendRow}>
             <View style={styles.legendItem}>
-              <View
-                style={[
-                  styles.legendSwatch,
-                  styles.legendSwatchGreen,
-                ]}
-              />
-              <Text style={styles.legendText}>
-                {counts.correct} correct
-              </Text>
+              <View style={[styles.legendSwatch, styles.legendSwatchGreen]} />
+              <Text style={styles.legendText}>{counts.correct} correct</Text>
             </View>
             <View style={styles.legendItem}>
-              <View
-                style={[
-                  styles.legendSwatch,
-                  styles.legendSwatchRed,
-                ]}
-              />
-              <Text style={styles.legendText}>
-                {counts.wrong} wrong
-              </Text>
+              <View style={[styles.legendSwatch, styles.legendSwatchRed]} />
+              <Text style={styles.legendText}>{counts.wrong} wrong</Text>
             </View>
             <View style={styles.legendItem}>
-              <View
-                style={[
-                  styles.legendSwatch,
-                  styles.legendSwatchPurple,
-                ]}
-              />
-              <Text style={styles.legendText}>
-                {counts.timeout} timeout
-              </Text>
+              <View style={[styles.legendSwatch, styles.legendSwatchPurple]} />
+              <Text style={styles.legendText}>{counts.timeout} timeout</Text>
             </View>
           </View>
           {best > 0 ? (
-            <Text style={styles.bestLine}>
-              Best score: {best}
-            </Text>
+            <Text style={styles.bestLine}>Best score: {best}</Text>
           ) : null}
         </View>
 
@@ -260,9 +206,7 @@ const ChallengeResultsScreen = () => {
           accessibilityRole="button"
           onPress={onHome}
           style={styles.secondary}>
-          <Text style={styles.secondaryTxt}>
-            Back to Menu
-          </Text>
+          <Text style={styles.secondaryTxt}>Back to Menu</Text>
         </Pressable>
       </View>
     </Layout>
@@ -272,16 +216,21 @@ const ChallengeResultsScreen = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+
     backgroundColor: '#0d0620',
   },
   headerTop: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     justifyContent: 'space-between',
+
     minHeight: 58,
   },
   titleWrap: {
     flex: 1,
+
     paddingRight: 12,
   },
   scrollFill: {
@@ -295,101 +244,152 @@ const styles = StyleSheet.create({
   },
   medalEmoji: {
     fontSize: 72,
+
     textAlign: 'center',
+
     marginBottom: 8,
   },
   newRecord: {
     color: '#F5B800',
+
     fontSize: 20,
+
     fontWeight: '800',
+
     textAlign: 'center',
+
     marginBottom: 22,
   },
   scoreCard: {
     borderRadius: 18,
+
     borderWidth: 2,
+
     borderColor: '#F5B800',
+
     backgroundColor: '#1a0d32',
+
     padding: 20,
+
     marginBottom: 16,
   },
   scoreLabel: {
     color: '#9ca3af',
+
     fontSize: 11,
+
     fontWeight: '700',
+
     letterSpacing: 1,
+
     marginBottom: 6,
+
     textAlign: 'center',
   },
   scoreBig: {
     color: '#F5B800',
+
     fontSize: 56,
+
     fontWeight: '900',
+
     lineHeight: 62,
+
     textAlign: 'center',
   },
   scoreSub: {
     color: '#c9bdd9',
+
     fontSize: 14,
+
     marginBottom: 19,
+
     textAlign: 'center',
   },
   barTrack: {
     height: 8,
+
     borderRadius: 5,
+
     backgroundColor: '#2a1f45',
+
     overflow: 'hidden',
   },
   barFill: {
     height: '100%',
+
     borderRadius: 5,
   },
   reviewCard: {
     borderRadius: 18,
+
     backgroundColor: '#1a0d32',
+
     padding: 16,
+
     marginBottom: 24,
   },
   reviewTitle: {
     color: '#f0e8ff',
+
     fontSize: 15,
+
     fontWeight: '700',
+
     marginBottom: 12,
   },
   grid: {
     flexDirection: 'row',
+
     flexWrap: 'wrap',
+
     gap: 8,
+
     marginBottom: 12,
   },
   cell: {
     width: 36,
+
     height: 36,
+
     borderRadius: 10,
+
     borderWidth: 2,
+
     alignItems: 'center',
+
     justifyContent: 'center',
   },
   cellTxt: {
     fontSize: 12,
+
     fontWeight: '500',
+
     color: '#e8e0ff',
   },
   legendRow: {
     flexDirection: 'row',
+
     flexWrap: 'wrap',
+
     alignItems: 'center',
+
     gap: 14,
+
     marginTop: 4,
   },
   legendItem: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     gap: 8,
   },
   legendSwatch: {
     width: 10,
+
     height: 10,
+
     borderRadius: 3,
   },
   legendSwatchGreen: {
@@ -403,47 +403,68 @@ const styles = StyleSheet.create({
   },
   legendText: {
     color: '#b8afc9',
+
     fontSize: 13,
+
     fontWeight: '600',
   },
   bestLine: {
     color: '#8b7baa',
+
     fontSize: 13,
+
     marginTop: 10,
   },
   primaryOuter: {
     borderRadius: 16,
+
     overflow: 'hidden',
+
     marginBottom: 12,
   },
   primaryGrad: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     justifyContent: 'center',
+
     gap: 10,
+
     height: 50,
   },
   primaryIcon: {
     color: '#ffffff',
+
     fontSize: 18,
+
     fontWeight: '700',
   },
   primaryTxt: {
     color: '#ffffff',
+
     fontSize: 16,
+
     fontWeight: '700',
   },
   secondary: {
     alignItems: 'center',
+
     paddingVertical: 14,
+
     borderRadius: 16,
+
     backgroundColor: '#1A0D3A',
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
   },
   secondaryTxt: {
     color: '#c9bdd9',
+
     fontSize: 16,
+
     fontWeight: '700',
   },
 });

@@ -4,17 +4,17 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: CountdownSportyAPIKey
+      app_store_connect: RoaBittCountdownSportyAPIKey
     environment:
       xcode: '26.0'
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.dkgjru.utoqnvjd.sskla
+        bundle_identifier: com.vjfkds.kfjspw.oopqw
       vars:
-        BUNDLE_ID: com.dkgjru.utoqnvjd.sskla
+        BUNDLE_ID: com.vjfkds.kfjspw.oopqw
         XCODE_WORKSPACE: SportyRooBitCountdown.xcworkspace
         XCODE_SCHEME: SportyRooBitCountdown
-        APP_STORE_APPLE_ID: 6770435037
+        APP_STORE_APPLE_ID: 6770570550
     scripts:
       - name: Install npm dependencies
         script: |
@@ -49,4 +49,4 @@ workflows:
       app_store_connect:
         auth: integration
         submit_to_app_store: true
-        copyright: 'Andriy Didenko 2026'
+        copyright: 'RoaBitt Countdown Sporty 2026'

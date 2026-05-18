@@ -15,8 +15,7 @@ export function getCountdownParts(
 ): CountdownParts {
   const t = eventDate.getTime();
   const n = now.getTime();
-  const diffMs =
-    mode === 'to' ? Math.max(0, t - n) : Math.max(0, n - t);
+  const diffMs = mode === 'to' ? Math.max(0, t - n) : Math.max(0, n - t);
   const totalDays = Math.floor(diffMs / 86400000);
   const remAfterDays = diffMs - totalDays * 86400000;
   const hours = Math.floor(remAfterDays / 3600000);

@@ -26,10 +26,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import type {Event} from '../data/eventTypes';
-import {
-  loadEvents,
-  saveEvents,
-} from '../data/eventStorage';
+import {loadEvents, saveEvents} from '../data/eventStorage';
 import {toastShowIfEnabled} from '../data/notificationPrefs';
 import type {RootParamList} from '../routes/rootParamList';
 import {gradients} from '../themes';
@@ -40,60 +37,36 @@ import {
   tryParseDdMmYyyy,
 } from '../utils';
 
-type formNav = NativeStackNavigationProp<
-  RootParamList,
-  'EventForm'
->;
+type formNav = NativeStackNavigationProp<RootParamList, 'EventForm'>;
 
-type formRoute = RouteProp<
-  RootParamList,
-  'EventForm'
->;
+type formRoute = RouteProp<RootParamList, 'EventForm'>;
 
 const EventFormScreen = () => {
-  const navigation =
-    useNavigation<formNav>();
+  const navigation = useNavigation<formNav>();
   const route = useRoute<formRoute>();
   const insets = useSafeAreaInsets();
 
-  const editId =
-    route.params?.eventId ?? undefined;
+  const editId = route.params?.eventId ?? undefined;
   const isEdit = Boolean(editId);
 
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
-  const [dateKey, setDateKey] = useState(
-    () => dateKeyFromDate(new Date()),
-  );
-  const [mode, setMode] = useState<
-    'to' | 'from'
-  >('to');
-  const [imageUri, setImageUri] =
-    useState<string | null>(null);
+  const [dateKey, setDateKey] = useState(() => dateKeyFromDate(new Date()));
+  const [mode, setMode] = useState<'to' | 'from'>('to');
+  const [imageUri, setImageUri] = useState<string | null>(null);
 
-  const [showIosDate, setShowIosDate] =
-    useState(false);
+  const [showIosDate, setShowIosDate] = useState(false);
 
-  const [
-    androidDateStr,
-    setAndroidDateStr,
-  ] = useState(() =>
-    formatDdMmYyyy(
-      dateKeyFromDate(new Date()),
-    ),
+  const [androidDateStr, setAndroidDateStr] = useState(() =>
+    formatDdMmYyyy(dateKeyFromDate(new Date())),
   );
 
-  const [dirty, setDirty] =
-    useState(false);
-  const [loaded, setLoaded] =
-    useState(false);
+  const [dirty, setDirty] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   const leaveAfterSaveRef = useRef(false);
 
-  const dateObj = useMemo(
-    () => parseDateKey(dateKey),
-    [dateKey],
-  );
+  const dateObj = useMemo(() => parseDateKey(dateKey), [dateKey]);
 
   const markDirty = useCallback(() => {
     setDirty(true);
@@ -103,33 +76,23 @@ const EventFormScreen = () => {
     if (Platform.OS !== 'android') {
       return;
     }
-    const parsed = tryParseDdMmYyyy(
-      androidDateStr,
-    );
+    const parsed = tryParseDdMmYyyy(androidDateStr);
     if (parsed === null) {
       Alert.alert('Invalid date', 'Use DD.MM.YYYY (for example 12.05.2026).');
-      setAndroidDateStr(
-        formatDdMmYyyy(dateKey),
-      );
+      setAndroidDateStr(formatDdMmYyyy(dateKey));
       return;
     }
     if (parsed !== dateKey) {
       setDateKey(parsed);
       markDirty();
     }
-  }, [
-    androidDateStr,
-    dateKey,
-    markDirty,
-  ]);
+  }, [androidDateStr, dateKey, markDirty]);
 
   useEffect(() => {
     if (Platform.OS !== 'android') {
       return;
     }
-    setAndroidDateStr(
-      formatDdMmYyyy(dateKey),
-    );
+    setAndroidDateStr(formatDdMmYyyy(dateKey));
   }, [dateKey]);
 
   useFocusEffect(
@@ -143,9 +106,7 @@ const EventFormScreen = () => {
           return;
         }
         const all = await loadEvents();
-        const found = all.find(
-          e => e.id === editId,
-        );
+        const found = all.find(e => e.id === editId);
         if (!ok) {
           return;
         }
@@ -175,35 +136,30 @@ const EventFormScreen = () => {
   }, [editId]);
 
   useEffect(() => {
-    const unsub = navigation.addListener(
-      'beforeRemove',
-      evt => {
-        if (leaveAfterSaveRef.current) {
-          leaveAfterSaveRef.current = false;
-          return;
-        }
-        if (!dirty) {
-          return;
-        }
-        evt.preventDefault();
-        Alert.alert(
-          'Unsaved Changes',
-          "You have changes that haven't been saved yet. If you leave now, your edits will be lost.",
-          [
-            {text: 'Cancel', style: 'cancel'},
-            {
-              text: 'Leave',
-              style: 'destructive',
-              onPress: () => {
-                navigation.dispatch(
-                  evt.data.action,
-                );
-              },
+    const unsub = navigation.addListener('beforeRemove', evt => {
+      if (leaveAfterSaveRef.current) {
+        leaveAfterSaveRef.current = false;
+        return;
+      }
+      if (!dirty) {
+        return;
+      }
+      evt.preventDefault();
+      Alert.alert(
+        'Unsaved Changes',
+        "You have changes that haven't been saved yet. If you leave now, your edits will be lost.",
+        [
+          {text: 'Cancel', style: 'cancel'},
+          {
+            text: 'Leave',
+            style: 'destructive',
+            onPress: () => {
+              navigation.dispatch(evt.data.action);
             },
-          ],
-        );
-      },
-    );
+          },
+        ],
+      );
+    });
     return unsub;
   }, [navigation, dirty]);
 
@@ -215,8 +171,7 @@ const EventFormScreen = () => {
     if (res.didCancel || res.errorCode) {
       return;
     }
-    const uri =
-      res.assets?.[0]?.uri ?? null;
+    const uri = res.assets?.[0]?.uri ?? null;
     if (uri) {
       setImageUri(uri);
       markDirty();
@@ -231,9 +186,7 @@ const EventFormScreen = () => {
 
     let resolvedDateKey = dateKey;
     if (Platform.OS === 'android') {
-      const parsed = tryParseDdMmYyyy(
-        androidDateStr,
-      );
+      const parsed = tryParseDdMmYyyy(androidDateStr);
       if (parsed === null) {
         Alert.alert('Invalid date', 'Use DD.MM.YYYY (for example 12.05.2026).');
         return;
@@ -268,10 +221,7 @@ const EventFormScreen = () => {
         mode: mode,
         imageUri: imageUri,
       };
-      next = [
-        ...all,
-        created,
-      ];
+      next = [...all, created];
     }
     await saveEvents(next);
     leaveAfterSaveRef.current = true;
@@ -294,31 +244,20 @@ const EventFormScreen = () => {
     navigation,
   ]);
 
-  const canSave =
-    title.trim().length > 0 && loaded;
+  const canSave = title.trim().length > 0 && loaded;
 
   const close = () => {
     navigation.goBack();
   };
 
-  const primaryLabel = isEdit
-    ? 'Save Changes'
-    : 'Add Event ✓';
+  const primaryLabel = isEdit ? 'Save Changes' : 'Add Event ✓';
 
   return (
-    <View
-      style={[
-        styles.root,
-        {paddingBottom: insets.bottom},
-      ]}>
+    <View style={[styles.root, {paddingBottom: insets.bottom}]}>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         style={styles.flex}>
-        <View
-          style={[
-            styles.header,
-            {paddingTop: insets.top + 8},
-          ]}>
+        <View style={[styles.header, {paddingTop: insets.top + 8}]}>
           <Text style={styles.headerTitle}>
             {isEdit ? 'Edit Event' : 'New Event'}
           </Text>
@@ -351,9 +290,7 @@ const EventFormScreen = () => {
                 <Image
                   source={require('../../assets/i/sportyritcounimg.png')}
                 />
-                <Text style={styles.photoHint}>
-                  Tap to add photo
-                </Text>
+                <Text style={styles.photoHint}>Tap to add photo</Text>
               </>
             )}
           </Pressable>
@@ -381,10 +318,7 @@ const EventFormScreen = () => {
             }}
             placeholder="Add a short note about this event..."
             placeholderTextColor="rgba(240,232,255,0.5)"
-            style={[
-              styles.input,
-              styles.area,
-            ]}
+            style={[styles.input, styles.area]}
             textAlignVertical="top"
             value={desc}
           />
@@ -402,18 +336,14 @@ const EventFormScreen = () => {
                 style={styles.input}
                 value={androidDateStr}
               />
-              <Text style={styles.dateHint}>
-                Enter date as DD.MM.YYYY
-              </Text>
+              <Text style={styles.dateHint}>Enter date as DD.MM.YYYY</Text>
             </>
           ) : (
             <Pressable
               accessibilityRole="button"
               onPress={() => setShowIosDate(true)}
               style={styles.dateRow}>
-              <Text style={styles.dateTxt}>
-                {formatDdMmYyyy(dateKey)}
-              </Text>
+              <Text style={styles.dateTxt}>{formatDdMmYyyy(dateKey)}</Text>
               <Image
                 source={require('../../assets/i/sportyritcocallndar.png')}
               />
@@ -421,10 +351,7 @@ const EventFormScreen = () => {
           )}
 
           {Platform.OS === 'ios' ? (
-            <Modal
-              animationType="fade"
-              transparent
-              visible={showIosDate}>
+            <Modal animationType="fade" transparent visible={showIosDate}>
               <Pressable
                 accessibilityRole="button"
                 onPress={() => setShowIosDate(false)}
@@ -447,18 +374,14 @@ const EventFormScreen = () => {
                   <Pressable
                     onPress={() => setShowIosDate(false)}
                     style={styles.modalDone}>
-                    <Text style={styles.modalDoneTxt}>
-                      Done
-                    </Text>
+                    <Text style={styles.modalDoneTxt}>Done</Text>
                   </Pressable>
                 </Pressable>
               </Pressable>
             </Modal>
           ) : null}
 
-          <Text style={styles.lblBelowDate}>
-            COUNTDOWN TYPE
-          </Text>
+          <Text style={styles.lblBelowDate}>COUNTDOWN TYPE</Text>
           <View style={styles.typeRow}>
             <Pressable
               accessibilityRole="button"
@@ -469,16 +392,10 @@ const EventFormScreen = () => {
               }}
               style={[
                 styles.typeCard,
-                mode === 'to'
-                  ? styles.typeCardOn
-                  : styles.typeCardOff,
+                mode === 'to' ? styles.typeCardOn : styles.typeCardOff,
               ]}>
-              <Text style={styles.typeTitle}>
-                ⏳ Count To
-              </Text>
-              <Text style={styles.typeSub}>
-                Days until event
-              </Text>
+              <Text style={styles.typeTitle}>⏳ Count To</Text>
+              <Text style={styles.typeSub}>Days until event</Text>
             </Pressable>
             <Pressable
               accessibilityRole="button"
@@ -491,16 +408,10 @@ const EventFormScreen = () => {
               }}
               style={[
                 styles.typeCard,
-                mode === 'from'
-                  ? styles.typeCardOn
-                  : styles.typeCardOff,
+                mode === 'from' ? styles.typeCardOn : styles.typeCardOff,
               ]}>
-              <Text style={styles.typeTitle}>
-                ⏱ Count From
-              </Text>
-              <Text style={styles.typeSub}>
-                Days since event
-              </Text>
+              <Text style={styles.typeTitle}>⏱ Count From</Text>
+              <Text style={styles.typeSub}>Days since event</Text>
             </Pressable>
           </View>
 
@@ -510,8 +421,7 @@ const EventFormScreen = () => {
             onPress={onSave}
             style={[
               styles.submitOuter,
-              !canSave &&
-                styles.submitOuterDisabled,
+              !canSave && styles.submitOuterDisabled,
             ]}>
             {canSave ? (
               <LinearGradient
@@ -519,15 +429,11 @@ const EventFormScreen = () => {
                 end={{x: 1, y: 0.5}}
                 start={{x: 0, y: 0.5}}
                 style={styles.submitGrad}>
-                <Text style={styles.submitTxtOn}>
-                  {primaryLabel}
-                </Text>
+                <Text style={styles.submitTxtOn}>{primaryLabel}</Text>
               </LinearGradient>
             ) : (
               <View style={styles.submitDisabledInner}>
-                <Text style={styles.submitTxtOff}>
-                  {primaryLabel}
-                </Text>
+                <Text style={styles.submitTxtOff}>{primaryLabel}</Text>
               </View>
             )}
           </Pressable>
@@ -542,6 +448,7 @@ export default EventFormScreen;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+
     backgroundColor: '#0d0620',
   },
   flex: {
@@ -549,99 +456,157 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     justifyContent: 'space-between',
+
     paddingHorizontal: 20,
+
     paddingBottom: 16,
+
     backgroundColor: '#1a0d3a',
+
     borderBottomWidth: 1,
+
     borderBottomColor: '#3d2380',
   },
   headerTitle: {
     color: '#f0e8ff',
+
     fontSize: 20,
+
     fontWeight: '800',
+
     letterSpacing: -0.45,
   },
   closeBtn: {
     width: 36,
+
     height: 36,
+
     borderRadius: 10,
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     backgroundColor: '#231550',
+
     alignItems: 'center',
+
     justifyContent: 'center',
   },
   closeTxt: {
     color: '#f0e8ff',
+
     fontSize: 16,
+
     fontWeight: '600',
   },
   scroll: {
     paddingHorizontal: 18,
+
     paddingTop: 24,
+
     paddingBottom: 92,
   },
   photoBox: {
     borderWidth: 2,
+
     borderColor: '#3d2380',
+
     borderStyle: 'dashed',
+
     borderRadius: 16,
+
     minHeight: 127,
+
     alignItems: 'center',
+
     justifyContent: 'center',
+
     marginBottom: 20,
+
     backgroundColor: '#231550',
   },
   photoIcon: {
     fontSize: 32,
+
     marginBottom: 8,
   },
   photoHint: {
     color: '#8b7baa',
+
     fontSize: 14,
+
     fontWeight: '500',
+
     marginTop: 10,
   },
   photoPreview: {
     width: '100%',
+
     height: 140,
+
     borderRadius: 12,
   },
   lbl: {
     color: '#8b7baa',
+
     fontSize: 12,
+
     fontWeight: '600',
+
     letterSpacing: 1,
+
     marginBottom: 8,
+
     textTransform: 'uppercase',
   },
   lblBelowDate: {
     color: '#8b7baa',
+
     fontSize: 12,
+
     fontWeight: '600',
+
     letterSpacing: 1,
+
     marginBottom: 8,
+
     marginTop: 8,
+
     textTransform: 'uppercase',
   },
   input: {
     backgroundColor: '#231550',
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     borderRadius: 12,
+
     paddingHorizontal: 14,
+
     paddingVertical: 14,
+
     color: '#f0e8ff',
+
     fontSize: 15,
+
     marginBottom: 18,
   },
   dateHint: {
     marginTop: -12,
+
     marginBottom: 18,
+
     color: '#8b7baa',
+
     fontSize: 11,
+
     fontWeight: '500',
   },
   area: {
@@ -649,18 +614,28 @@ const styles = StyleSheet.create({
   },
   dateRow: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     justifyContent: 'space-between',
+
     backgroundColor: '#231550',
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     borderRadius: 12,
+
     paddingHorizontal: 14,
+
     paddingVertical: 14,
+
     marginBottom: 18,
   },
   dateTxt: {
     color: '#f0e8ff',
+
     fontSize: 15,
   },
   calIcon: {
@@ -668,42 +643,61 @@ const styles = StyleSheet.create({
   },
   typeRow: {
     flexDirection: 'row',
+
     gap: 8,
+
     marginBottom: 24,
   },
   typeCard: {
     flex: 1,
+
     borderRadius: 12,
+
     paddingHorizontal: 14,
+
     paddingTop: 14,
+
     paddingBottom: 12,
+
     minHeight: 66,
   },
   typeCardOn: {
     backgroundColor: '#2d1b69',
+
     borderWidth: 2,
+
     borderColor: '#7b2fbe',
   },
   typeCardOff: {
     backgroundColor: '#231550',
+
     borderWidth: 2,
+
     borderColor: '#3d2380',
   },
   typeTitle: {
     color: '#f0e8ff',
+
     fontSize: 13,
+
     fontWeight: '700',
+
     marginBottom: 2,
   },
   typeSub: {
     color: '#8b7baa',
+
     fontSize: 11,
+
     fontWeight: '500',
+
     letterSpacing: 0.06,
   },
   submitOuter: {
     borderRadius: 16,
+
     overflow: 'hidden',
+
     marginTop: 8,
   },
   submitOuterDisabled: {
@@ -711,48 +705,67 @@ const styles = StyleSheet.create({
   },
   submitGrad: {
     width: '100%',
+
     height: 50,
+
     alignItems: 'center',
+
     justifyContent: 'center',
   },
   submitDisabledInner: {
     backgroundColor: '#2d1b69',
+
     height: 50,
+
     alignItems: 'center',
+
     justifyContent: 'center',
   },
   submitTxtOn: {
     color: '#FFFFFF',
+
     fontSize: 16,
+
     fontWeight: '700',
   },
   submitTxtOff: {
     color: '#5a4a7a',
+
     fontSize: 16,
+
     fontWeight: '700',
   },
   modalBackdrop: {
     flex: 1,
+
     backgroundColor: 'rgba(0,0,0,0.6)',
+
     justifyContent: 'flex-end',
   },
   modalSheet: {
     backgroundColor: '#1a0d3a',
+
     paddingBottom: 24,
+
     borderTopLeftRadius: 16,
+
     borderTopRightRadius: 16,
   },
   modalPickerWrap: {
     width: '100%',
+
     alignItems: 'center',
   },
   modalDone: {
     alignItems: 'center',
+
     paddingVertical: 12,
   },
   modalDoneTxt: {
     color: '#a855f7',
+
     fontSize: 17,
+
     fontWeight: '700',
   },
 });

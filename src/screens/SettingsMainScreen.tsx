@@ -129,7 +129,7 @@ const SettingsMainScreen = () => {
                 iconImage={require('../../assets/i/sportyritcoscnxtra.png')}
                 onPress={() =>
                   Linking.openURL(
-                    'https://apps.apple.com/us/app/roabitt-countdown-sporty/id6770435037',
+                    'https://apps.apple.com/us/app/roabitt-countdown-sporty/id6770570550',
                   )
                 }
                 subtitle="Love App? Tell us!"
@@ -141,7 +141,7 @@ const SettingsMainScreen = () => {
                 iconImage={require('../../assets/i/sportyritcoscnxtshr.png')}
                 onPress={() =>
                   Linking.openURL(
-                    'https://apps.apple.com/us/app/roabitt-countdown-sporty/id6770435037',
+                    'https://apps.apple.com/us/app/roabitt-countdown-sporty/id6770570550',
                   )
                 }
                 subtitle="Spread the sports love"
@@ -191,6 +191,7 @@ const SettingsRow = ({
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+
     backgroundColor: '#0d0620',
   },
   gearEmoji: {
@@ -198,20 +199,27 @@ const styles = StyleSheet.create({
   },
   notifRow: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     paddingVertical: 16,
+
     paddingHorizontal: 14,
+
     gap: 12,
   },
-
   rowText: {
     flex: 1,
+
     minWidth: 0,
   },
   chevron: {
     color: '#6b7280',
+
     fontSize: 22,
+
     fontWeight: '300',
+
     marginLeft: 4,
   },
 });

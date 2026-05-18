@@ -1,6 +1,7 @@
 import {
   Image,
   ImageBackground,
+  Platform,
   ScrollView,
   StyleSheet,
   View,
@@ -178,9 +179,22 @@ const Loader = () => {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}>
         <View style={styles.logoWrap}>
-          <Image
-            source={require('../../assets/i/sportyritcountddownloalogo.png')}
-          />
+          {Platform.OS === 'ios' ? (
+            <Image
+              source={require('../../assets/i/icon.png')}
+              style={{
+                width: 150,
+                height: 150,
+                borderRadius: 42,
+                borderWidth: 1,
+                borderColor: 'rgba(245, 184, 0, 1)',
+              }}
+            />
+          ) : (
+            <Image
+              source={require('../../assets/i/sportyritcountddownloalogo.png')}
+            />
+          )}
         </View>
         <View
           style={{
@@ -206,6 +220,7 @@ export default Loader;
 const styles = StyleSheet.create({
   imageBg: {
     flex: 1,
+
     backgroundColor: '#0A1810',
   },
   scrollContent: {
@@ -213,29 +228,42 @@ const styles = StyleSheet.create({
   },
   logoWrap: {
     flex: 1,
+
     justifyContent: 'center',
+
     alignItems: 'center',
   },
-
   bottomWrap: {
     justifyContent: 'flex-end',
+
     alignItems: 'center',
+
     paddingBottom: 40,
   },
   bottomText: {
     color: '#FFFFFF',
+
     fontSize: 12,
+
     fontFamily: 'DmSans-Regular',
+
     marginTop: 11,
+
     textAlign: 'center',
   },
   webviewDock: {
     alignItems: 'center',
+
     flex: 1,
+
     position: 'absolute',
+
     bottom: 0,
+
     left: 0,
+
     right: 0,
+
     paddingBottom: 20,
   },
 });

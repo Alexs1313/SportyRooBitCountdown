@@ -54,8 +54,7 @@ const WelcomeScreen = () => {
   const insets = useSafeAreaInsets();
   const [step, setStep] = useState(0);
 
-  const current =
-    WELCOME_STEPS[step];
+  const current = WELCOME_STEPS[step];
 
   const goMain = () => {
     navigation.replace('MainTabs');
@@ -76,10 +75,7 @@ const WelcomeScreen = () => {
           accessibilityRole="button"
           hitSlop={12}
           onPress={goMain}
-          style={[
-            styles.skipBtn,
-            {top: insets.top + 12},
-          ]}>
+          style={[styles.skipBtn, {top: insets.top + 12}]}>
           <Text style={styles.skipText}>Skip</Text>
         </Pressable>
 
@@ -116,39 +112,28 @@ const WelcomeScreen = () => {
                   }),
                 },
               ]}>
-              <Text style={styles.featureEmoji}>
-                {current.featureEmoji}
-              </Text>
+              <Text style={styles.featureEmoji}>{current.featureEmoji}</Text>
             </View>
 
             <Text style={styles.overline}>
               {current.overline.toUpperCase()}
             </Text>
-            <Text style={styles.title}>
-              {current.title}
-            </Text>
-            <Text style={styles.body}>
-              {current.body}
-            </Text>
+            <Text style={styles.title}>{current.title}</Text>
+            <Text style={styles.body}>{current.body}</Text>
 
             <View style={styles.dots}>
-              {WELCOME_STEPS.map(
-                (_, idx) => {
-                  const active =
-                    idx === step;
-                  return (
-                    <View
-                      key={idx}
-                      style={[
-                        styles.dot,
-                        active
-                          ? styles.dotActive
-                          : styles.dotIdle,
-                      ]}
-                    />
-                  );
-                },
-              )}
+              {WELCOME_STEPS.map((_, idx) => {
+                const active = idx === step;
+                return (
+                  <View
+                    key={idx}
+                    style={[
+                      styles.dot,
+                      active ? styles.dotActive : styles.dotIdle,
+                    ]}
+                  />
+                );
+              })}
             </View>
 
             <Pressable
@@ -159,8 +144,7 @@ const WelcomeScreen = () => {
                 colors={[...gradients.cta]}
                 style={styles.ctaGradient}>
                 <Text style={styles.ctaText}>
-                  {step ===
-                  WELCOME_STEPS.length - 1
+                  {step === WELCOME_STEPS.length - 1
                     ? 'Get Started 🚀'
                     : 'Next →'}
                 </Text>
@@ -178,128 +162,191 @@ export default WelcomeScreen;
 const styles = StyleSheet.create({
   screenFill: {
     flex: 1,
+
     paddingBottom: 50,
   },
   lowerPush: {
     flex: 1,
+
     justifyContent: 'flex-end',
   },
   skipBtn: {
     position: 'absolute',
+
     right: 24,
+
     zIndex: 2,
+
     backgroundColor: '#231550',
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     borderRadius: 20,
+
     paddingHorizontal: 18,
+
     paddingVertical: 9,
   },
   skipText: {
     color: '#8b7baa',
+
     fontSize: 13,
+
     fontWeight: '600',
+
     letterSpacing: -0.08,
   },
   heroWrapTall: {
     width: '100%',
+
     overflow: 'hidden',
+
     height: 440,
   },
   heroImg: {
     ...StyleSheet.absoluteFillObject,
     width: '100%',
+
     height: '100%',
   },
   heroFade: {
     position: 'absolute',
+
     left: 0,
+
     right: 0,
+
     bottom: 0,
+
     height: 120,
   },
   lower: {
     paddingHorizontal: spacing.welcomeHorizontal,
+
     paddingTop: 8,
+
     width: '100%',
+
     alignSelf: 'center',
   },
   featureRing: {
     width: 60,
+
     height: 60,
+
     borderRadius: 30,
+
     borderWidth: 2,
+
     borderColor: '#f5b800',
+
     backgroundColor: '#231550',
+
     alignItems: 'center',
+
     justifyContent: 'center',
+
     padding: 2,
+
     marginBottom: 20,
   },
   featureEmoji: {
     fontSize: 24,
+
     lineHeight: 36,
   },
   overline: {
     color: '#f5b800',
+
     fontSize: 12,
+
     fontWeight: '700',
+
     letterSpacing: 2,
+
     lineHeight: 18,
+
     marginBottom: 8,
   },
   title: {
     color: '#f0e8ff',
+
     fontSize: 26,
+
     fontWeight: '800',
+
     letterSpacing: 0.22,
+
     lineHeight: 31.2,
+
     marginBottom: 14,
   },
   body: {
     color: '#8b7baa',
+
     fontSize: 15,
+
     fontWeight: '400',
+
     letterSpacing: -0.23,
+
     lineHeight: 24.75,
 
     flexGrow: 1,
   },
   dots: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     gap: 8,
+
     marginTop: 24,
+
     marginBottom: 20,
   },
   dot: {
     height: 4,
+
     borderRadius: 2,
   },
   dotActive: {
     width: 28,
+
     backgroundColor: '#f5b800',
   },
   dotIdle: {
     width: 8,
+
     backgroundColor: '#3d2380',
   },
   ctaOuter: {
     borderRadius: 16,
+
     overflow: 'hidden',
+
     marginBottom: 8,
+
     marginTop: 24,
   },
   ctaGradient: {
     height: 58,
+
     alignItems: 'center',
+
     justifyContent: 'center',
+
     width: '100%',
   },
   ctaText: {
     color: '#FFFFFF',
+
     fontSize: 16,
+
     fontWeight: '700',
+
     letterSpacing: -0.01,
   },
 });

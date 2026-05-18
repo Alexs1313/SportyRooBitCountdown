@@ -11,8 +11,7 @@ import {gradients, screenStyles, spacing} from '../themes';
 import {headerPaddingTop, tabBarPadding} from '../utils';
 
 const ChallengeHomeScreen = () => {
-  const navigation =
-    useNavigation<ChallengeHomeNav>();
+  const navigation = useNavigation<ChallengeHomeNav>();
   const insets = useSafeAreaInsets();
   const tabPadBottom = tabBarPadding(insets.bottom);
 
@@ -33,20 +32,14 @@ const ChallengeHomeScreen = () => {
         <Text style={screenStyles.screenTitle}>Challenge ⚡</Text>
       </View>
 
-      <View
-        style={[
-          styles.scrollContent,
-          {paddingBottom: tabPadBottom},
-        ]}>
+      <View style={[styles.scrollContent, {paddingBottom: tabPadBottom}]}>
         <Image
           accessibilityIgnoresInvertColors
           resizeMode="contain"
           source={require('../../assets/i/sportyritcoscchal.png')}
           style={styles.hero}
         />
-        <Text style={styles.headline}>
-          Sporty Roo Challenges You!
-        </Text>
+        <Text style={styles.headline}>Sporty Roo Challenges You!</Text>
         <Text style={styles.body}>
           Answer sport questions, build your score, and sharpen your game
           knowledge
@@ -56,13 +49,9 @@ const ChallengeHomeScreen = () => {
           accessibilityRole="button"
           onPress={onStart}
           style={styles.ctaOuter}>
-          <LinearGradient
-            colors={[...gradients.cta]}
-            style={styles.ctaGrad}>
+          <LinearGradient colors={[...gradients.cta]} style={styles.ctaGrad}>
             <Text style={styles.ctaIcon}>⚡</Text>
-            <Text style={styles.ctaText}>
-              Start Challenge!
-            </Text>
+            <Text style={styles.ctaText}>Start Challenge!</Text>
           </LinearGradient>
         </Pressable>
       </View>
@@ -73,11 +62,14 @@ const ChallengeHomeScreen = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+
     backgroundColor: '#0d0620',
   },
   scrollContent: {
     paddingHorizontal: spacing.screenHorizontalWide,
+
     paddingTop: 12,
+
     alignItems: 'center',
   },
   hero: {
@@ -85,9 +77,13 @@ const styles = StyleSheet.create({
   },
   headline: {
     color: '#facc15',
+
     fontSize: 22,
+
     fontWeight: '800',
+
     textAlign: 'center',
+
     marginBottom: 12,
   },
   body: {

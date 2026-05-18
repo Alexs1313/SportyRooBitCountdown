@@ -1,8 +1,9 @@
 import {useNavigation} from '@react-navigation/native';
 import type {NativeStackNavigationProp} from '@react-navigation/native-stack';
-
 import React, {useCallback} from 'react';
+
 import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import type {RootParamList} from '../routes/rootParamList';
@@ -70,77 +71,113 @@ const AboutScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    backgroundColor: '#0d0620',
-  },
-  topBar: {
-    paddingHorizontal: 18,
-    paddingBottom: 12,
-  },
   backBtn: {
     flexDirection: 'row',
+
     alignItems: 'center',
+
     alignSelf: 'flex-start',
+
     gap: 4,
+
     backgroundColor: '#1A0D3A',
+
     paddingHorizontal: 14,
+
     paddingVertical: 10,
+
     borderRadius: 12,
+
     borderWidth: 1,
+
     borderColor: '#3D2380',
+
     marginBottom: 12,
   },
   backChevron: {
     color: '#ffffff',
+
     fontSize: 22,
+
     fontWeight: '700',
+
     marginTop: -2,
   },
   backTxt: {
     color: '#F0E8FF',
+
     fontSize: 14,
+
     fontWeight: '600',
   },
   pageTitle: {
     color: '#ffffff',
+
     fontSize: 22,
+
     fontWeight: '800',
+
     lineHeight: 28,
   },
   headerRule: {
     height: 1,
+
     backgroundColor: '#2D1B69',
+
     marginHorizontal: 0,
   },
   scroll: {
     paddingHorizontal: 20,
+
     paddingTop: 20,
   },
   card: {
     borderRadius: 16,
+
     borderWidth: 1,
+
     borderColor: '#3d2380',
+
     backgroundColor: '#1a0d32',
+
     padding: 16,
+
     marginBottom: 14,
   },
   cardTitle: {
     color: '#F5B800',
+
     fontSize: 14,
+
     fontWeight: '700',
+    // Add margin bottom to the card title
     marginBottom: 10,
   },
   body: {
     color: '#C4B8E0',
+
     fontSize: 13,
+
     lineHeight: 23,
   },
   bullet: {
     color: '#C4B8E0',
+
     fontSize: 13,
+
     lineHeight: 24,
+
     marginBottom: 6,
+  },
+  root: {
+    flex: 1,
+
+    backgroundColor: '#0d0620',
+  },
+  topBar: {
+    paddingHorizontal: 18,
+
+    paddingBottom: 12,
   },
 });
 

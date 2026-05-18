@@ -16,11 +16,6 @@ export async function loadSavedGreetings(): Promise<SavedGreeting[]> {
   }
 }
 
-export async function saveSavedGreetings(
-  rows: SavedGreeting[],
-): Promise<void> {
-  await AsyncStorage.setItem(
-    STORAGE_KEYS.greetings,
-    JSON.stringify(rows),
-  );
+export async function saveSavedGreetings(rows: SavedGreeting[]): Promise<void> {
+  await AsyncStorage.setItem(STORAGE_KEYS.greetings, JSON.stringify(rows));
 }
