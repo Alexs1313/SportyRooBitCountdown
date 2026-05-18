@@ -438,13 +438,9 @@ const EventFormScreen = () => {
                       mode="date"
                       themeVariant="dark"
                       value={dateObj}
-                      onChange={(_, d) => {
-                        if (d) {
-                          setDateKey(
-                            dateKeyFromDate(d),
-                          );
-                          markDirty();
-                        }
+                      onValueChange={(_, d) => {
+                        setDateKey(dateKeyFromDate(d));
+                        markDirty();
                       }}
                     />
                   </View>
