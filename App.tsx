@@ -2,15 +2,15 @@ import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import Toast from 'react-native-toast-message';
 
-import RootNav from './SprttyConTdowNsrc/SprttyConTdowNroutes/SprttyConTdowNnav';
+import StackkNav from './appScr/SprttyConTdowNroutes/StackkNav';
 
 const App = () => {
   return (
     <>
       <NavigationContainer>
-        <RootNav />
+        <StackkNav />
+        <Toast bottomOffset={96} />
       </NavigationContainer>
-      <Toast bottomOffset={96} />
     </>
   );
 };

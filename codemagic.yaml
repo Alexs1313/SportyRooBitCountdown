@@ -1,6 +1,6 @@
 workflows:
   ios-workflow:
-    name: 'RoaBit Countdown'
+    name: 'RoaBitt Athletic Countdown'
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
@@ -9,12 +9,12 @@ workflows:
       xcode: '26.0'
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.sprtt.cntdwn.dklaf
+        bundle_identifier: com.fhfjtto.ooepw.qqw
       vars:
-        BUNDLE_ID: com.sprtt.cntdwn.dklaf
+        BUNDLE_ID: com.fhfjtto.ooepw.qqw
         XCODE_WORKSPACE: SportyRooBitCountdown.xcworkspace
         XCODE_SCHEME: SportyRooBitCountdown
-        APP_STORE_APPLE_ID: 6770826683
+        APP_STORE_APPLE_ID: 6771005485
     scripts:
       - name: Install npm dependencies
         script: |

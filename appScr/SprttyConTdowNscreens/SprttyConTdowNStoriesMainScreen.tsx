@@ -84,7 +84,7 @@ const StoriesMainScreen = () => {
                   {
                     backgroundColor: accentChipBg[item.accent],
                     borderColor: accentChipBg[item.accent],
-                    borderWidth: 1,
+                    borderWidth: 1.6,
                   },
                 ]}>
                 <Text style={styles.emoji}>{item.emoji}</Text>
@@ -197,50 +197,50 @@ const styles = StyleSheet.create({
 
     justifyContent: 'space-between',
 
-    minHeight: 58,
+    minHeight: 58.4,
   },
   titleWrap: {
     flex: 1,
 
-    paddingRight: 12,
+    paddingRight: 12.7,
   },
   listContent: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 18.2,
 
-    paddingTop: 20,
+    paddingTop: 20.3,
   },
   factWrap: {
-    marginBottom: 22,
+    marginBottom: 22.3,
 
     position: 'relative',
   },
   factBlob: {
     position: 'absolute',
 
-    top: -8,
+    top: -8.4,
 
-    right: -4,
+    right: -4.6,
 
-    width: 96,
+    width: 96.8,
 
-    height: 96,
+    height: 96.8,
 
-    borderRadius: 48,
+    borderRadius: 48.1,
 
     backgroundColor: '#f5b800',
 
     opacity: 0.35,
   },
   factCard: {
-    borderRadius: 24,
+    borderRadius: 24.2,
 
-    borderWidth: 2,
+    borderWidth: 2.1,
 
     borderColor: '#f5b800',
 
     backgroundColor: '#1a0d32',
 
-    padding: 16,
+    padding: 16.2,
 
     overflow: 'hidden',
   },
@@ -251,23 +251,23 @@ const styles = StyleSheet.create({
 
     alignItems: 'center',
 
-    gap: 6,
+    gap: 6.5,
 
     backgroundColor: '#f5b800',
 
-    paddingHorizontal: 10,
+    paddingHorizontal: 10.3,
 
-    paddingVertical: 5,
+    paddingVertical: 5.7,
 
-    borderRadius: 999,
+    borderRadius: 999.1,
 
-    marginBottom: 12,
+    marginBottom: 12.6,
   },
   factBadgeIcon: {
-    fontSize: 13,
+    fontSize: 13.8,
   },
   factBadgeText: {
-    fontSize: 10,
+    fontSize: 10.7,
 
     fontWeight: '900',
 
@@ -276,39 +276,39 @@ const styles = StyleSheet.create({
     color: '#0d0620',
   },
   factBody: {
-    fontSize: 14,
+    fontSize: 14.3,
 
-    lineHeight: 22,
+    lineHeight: 22.5,
 
     color: '#F0E8FF',
 
-    marginBottom: 14,
+    marginBottom: 14.3,
 
     width: '80%',
   },
   factEmojiLead: {
-    fontSize: 16,
+    fontSize: 16.3,
   },
   factTag: {
     alignSelf: 'flex-start',
 
     backgroundColor: '#2D1B69',
 
-    paddingHorizontal: 12,
+    paddingHorizontal: 12.6,
 
-    paddingVertical: 5,
+    paddingVertical: 5.5,
 
-    borderRadius: 999,
+    borderRadius: 999.2,
   },
   factTagText: {
-    fontSize: 12,
+    fontSize: 12.2,
 
     fontWeight: '700',
 
     color: '#A855F7',
   },
   sectionLabel: {
-    fontSize: 11,
+    fontSize: 11.4,
 
     fontWeight: '700',
 
@@ -316,18 +316,18 @@ const styles = StyleSheet.create({
 
     color: '#8b7aad',
 
-    marginBottom: 12,
+    marginBottom: 12.3,
   },
   storyOuter: {
-    marginBottom: 14,
+    marginBottom: 14.4,
   },
   storyGradient: {
-    borderRadius: 16,
+    borderRadius: 16.4,
 
-    paddingTop: 2,
+    paddingTop: 2.4,
   },
   storyInner: {
-    borderRadius: 15,
+    borderRadius: 15.4,
 
     backgroundColor: '#1a0d3a',
 
@@ -338,16 +338,16 @@ const styles = StyleSheet.create({
 
     alignItems: 'flex-start',
 
-    padding: 14,
+    padding: 14.1,
 
-    gap: 12,
+    gap: 12.1,
   },
   emojiBox: {
-    width: 48,
+    width: 48.5,
 
-    height: 48,
+    height: 48.4,
 
-    borderRadius: 14,
+    borderRadius: 14.3,
 
     backgroundColor: '#2d1b69',
 
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   emoji: {
-    fontSize: 26,
+    fontSize: 26.8,
   },
   storyTextCol: {
     flex: 1,
@@ -370,47 +370,47 @@ const styles = StyleSheet.create({
 
     flexWrap: 'wrap',
 
-    gap: 8,
+    gap: 8.2,
 
-    marginBottom: 8,
+    marginBottom: 8.8,
   },
   tagPill: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 10.6,
 
-    paddingVertical: 4,
+    paddingVertical: 4.1,
 
-    borderRadius: 999,
+    borderRadius: 999.2,
   },
   tagPillText: {
-    fontSize: 10,
+    fontSize: 10.3,
 
     fontWeight: '900',
 
     letterSpacing: 0.6,
   },
   readRow: {
-    fontSize: 12,
+    fontSize: 12.8,
 
     fontWeight: '600',
 
     color: '#9ca3af',
   },
   clock: {
-    fontSize: 12,
+    fontSize: 12.7,
   },
   storyTitle: {
-    fontSize: 16,
+    fontSize: 16.1,
 
     fontWeight: '800',
 
     color: '#ffffff',
 
-    marginBottom: 6,
+    marginBottom: 6.5,
   },
   storySnippet: {
-    fontSize: 13,
+    fontSize: 13.7,
 
-    lineHeight: 19,
+    lineHeight: 19.6,
 
     color: '#b8afc9',
   },

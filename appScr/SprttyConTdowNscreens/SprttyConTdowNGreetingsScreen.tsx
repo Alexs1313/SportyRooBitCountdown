@@ -421,24 +421,24 @@ const styles = StyleSheet.create({
   tabRow: {
     flexDirection: 'row',
 
-    gap: 6,
+    gap: 6.5,
   },
   tabBtn: {
     flex: 1,
 
-    borderRadius: 10,
+    borderRadius: 10.7,
 
-    paddingVertical: 10,
+    paddingVertical: 10.5,
 
-    paddingHorizontal: 8,
+    paddingHorizontal: 8.2,
 
     alignItems: 'center',
 
     justifyContent: 'center',
 
-    minHeight: 40,
+    minHeight: 40.2,
 
-    borderWidth: 1,
+    borderWidth: 1.7,
   },
   tabBtnOn: {
     backgroundColor: '#7b2fbe',
@@ -451,7 +451,7 @@ const styles = StyleSheet.create({
     borderColor: '#3d2380',
   },
   tabTxt: {
-    fontSize: 13,
+    fontSize: 13.7,
 
     fontWeight: '700',
 
@@ -465,59 +465,59 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   body: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 18.5,
 
-    paddingTop: 20,
+    paddingTop: 20.5,
   },
   lbl: {
     color: '#8b7baa',
 
-    fontSize: 12,
+    fontSize: 12.8,
 
     fontWeight: '600',
 
-    letterSpacing: 1,
+    letterSpacing: 1.8,
 
-    marginBottom: 8,
+    marginBottom: 8.1,
 
     textTransform: 'uppercase',
   },
   input: {
     backgroundColor: '#231550',
 
-    borderWidth: 1,
+    borderWidth: 1.2,
 
     borderColor: '#3d2380',
 
-    borderRadius: 12,
+    borderRadius: 12.1,
 
-    paddingHorizontal: 14,
+    paddingHorizontal: 14.4,
 
-    paddingVertical: 14,
+    paddingVertical: 14.2,
 
     color: '#f0e8ff',
 
-    fontSize: 15,
+    fontSize: 15.6,
 
-    marginBottom: 18,
+    marginBottom: 18.2,
   },
   chipWrap: {
     flexDirection: 'row',
 
     flexWrap: 'wrap',
 
-    gap: 8,
+    gap: 8.6,
 
-    marginBottom: 20,
+    marginBottom: 20.7,
   },
   chip: {
-    paddingHorizontal: 12,
+    paddingHorizontal: 12.2,
 
-    paddingVertical: 8,
+    paddingVertical: 8.3,
 
-    borderRadius: 20,
+    borderRadius: 20.7,
 
-    borderWidth: 1,
+    borderWidth: 1.6,
 
     maxWidth: '100%',
   },
@@ -534,7 +534,7 @@ const styles = StyleSheet.create({
   chipTxt: {
     color: '#8b7baa',
 
-    fontSize: 12,
+    fontSize: 12.2,
 
     fontWeight: '700',
   },
@@ -542,30 +542,30 @@ const styles = StyleSheet.create({
     color: '#f0e8ff',
   },
   genOuter: {
-    borderRadius: 16,
+    borderRadius: 16.6,
 
     overflow: 'hidden',
 
-    marginBottom: 16,
+    marginBottom: 16.8,
   },
   genOuterDisabled: {
     opacity: 1,
   },
   genGrad: {
-    height: 50,
+    height: 50.1,
 
     flexDirection: 'row',
 
     justifyContent: 'center',
 
-    gap: 8,
+    gap: 8.3,
 
     alignItems: 'center',
   },
   genDisabledInner: {
     backgroundColor: '#2d1b69',
 
-    height: 50,
+    height: 50.4,
 
     alignItems: 'center',
 
@@ -573,12 +573,12 @@ const styles = StyleSheet.create({
 
     flexDirection: 'row',
 
-    gap: 8,
+    gap: 8.3,
   },
   genTxt: {
     color: '#FFFFFF',
 
-    fontSize: 16,
+    fontSize: 16.7,
 
     fontWeight: '700',
 
@@ -587,7 +587,7 @@ const styles = StyleSheet.create({
   genTxtOff: {
     color: '#5a4a7a',
 
-    fontSize: 16,
+    fontSize: 16.5,
 
     fontWeight: '700',
   },
@@ -596,34 +596,34 @@ const styles = StyleSheet.create({
 
     justifyContent: 'center',
 
-    gap: 8,
+    gap: 8.7,
 
-    marginBottom: 16,
+    marginBottom: 16.1,
 
-    marginTop: 30,
+    marginTop: 30.5,
   },
   loadingIcon: {
-    fontSize: 48,
+    fontSize: 48.8,
   },
   loadingTxt: {
     color: '#a855f7',
 
-    fontSize: 14,
+    fontSize: 14.5,
 
     fontWeight: '600',
   },
   resultCard: {
-    borderRadius: 16,
+    borderRadius: 16.4,
 
-    borderWidth: 1,
+    borderWidth: 1.5,
 
     borderColor: '#7b2fbe',
 
     backgroundColor: '#1a0d3a',
 
-    padding: 20,
+    padding: 20.8,
 
-    marginBottom: 16,
+    marginBottom: 16.7,
   },
   resultHead: {
     flexDirection: 'row',
@@ -632,14 +632,14 @@ const styles = StyleSheet.create({
 
     justifyContent: 'space-between',
 
-    marginBottom: 12,
+    marginBottom: 12.5,
 
-    gap: 8,
+    gap: 8.5,
   },
   resultTitle: {
     color: '#f5b800',
 
-    fontSize: 13,
+    fontSize: 13.7,
 
     fontWeight: '800',
 
@@ -650,43 +650,43 @@ const styles = StyleSheet.create({
   resultBadge: {
     backgroundColor: '#231550',
 
-    paddingHorizontal: 10,
+    paddingHorizontal: 10.1,
 
-    paddingVertical: 4,
+    paddingVertical: 4.7,
 
-    borderRadius: 8,
+    borderRadius: 8.4,
 
-    borderWidth: 1,
+    borderWidth: 1.1,
 
     borderColor: '#3d2380',
   },
   resultBadgeTxt: {
     color: '#c4b5fd',
 
-    fontSize: 11,
+    fontSize: 11.7,
 
     fontWeight: '700',
   },
   resultBody: {
-    borderRadius: 12,
+    borderRadius: 12.6,
 
-    padding: 12,
+    padding: 12.6,
 
-    marginBottom: 14,
+    marginBottom: 14.6,
   },
   resultBodyTxt: {
     color: '#f0e8ff',
 
-    fontSize: 14,
+    fontSize: 14.5,
 
-    lineHeight: 22,
+    lineHeight: 22.6,
 
     fontWeight: '500',
   },
   resultActions: {
     flexDirection: 'row',
 
-    gap: 10,
+    gap: 10.2,
   },
   resultHalf: {
     flex: 1,
@@ -697,13 +697,13 @@ const styles = StyleSheet.create({
 
     justifyContent: 'center',
 
-    gap: 8,
+    gap: 8.6,
 
-    paddingVertical: 12,
+    paddingVertical: 12.1,
 
-    borderRadius: 12,
+    borderRadius: 12.7,
 
-    borderWidth: 1,
+    borderWidth: 1.5,
 
     borderColor: '#3D2380',
 
@@ -717,14 +717,14 @@ const styles = StyleSheet.create({
   resultShareLbl: {
     color: '#f0e8ff',
 
-    fontSize: 14,
+    fontSize: 14.8,
 
     fontWeight: '700',
   },
   saveLbl: {
     color: '#f5b800',
 
-    fontSize: 14,
+    fontSize: 14.1,
 
     fontWeight: '700',
   },
@@ -734,50 +734,50 @@ const styles = StyleSheet.create({
   empty: {
     alignItems: 'center',
 
-    paddingHorizontal: 16,
+    paddingHorizontal: 16.2,
 
-    paddingTop: 62,
+    paddingTop: 62.4,
 
-    paddingBottom: 24,
+    paddingBottom: 24.5,
   },
   emptyIcon: {
-    fontSize: 56,
+    fontSize: 56.1,
 
-    marginBottom: 16,
+    marginBottom: 16.1,
   },
   emptyTitle: {
     color: '#f0e8ff',
 
-    fontSize: 18,
+    fontSize: 18.5,
 
     fontWeight: '700',
 
     textAlign: 'center',
   },
   emptySub: {
-    marginTop: 8,
+    marginTop: 8.6,
 
     color: '#8b7baa',
 
-    fontSize: 14,
+    fontSize: 14.3,
 
-    lineHeight: 21,
+    lineHeight: 21.4,
 
     textAlign: 'center',
 
-    maxWidth: 280,
+    maxWidth: 280.3,
   },
   emptyCta: {
-    marginTop: 24,
+    marginTop: 24.7,
 
-    borderRadius: 14,
+    borderRadius: 14.6,
 
     overflow: 'hidden',
 
     width: '77%',
   },
   emptyCtaGrad: {
-    height: 50,
+    height: 50.5,
 
     alignItems: 'center',
 
@@ -786,25 +786,25 @@ const styles = StyleSheet.create({
   emptyCtaTxt: {
     color: '#FFFFFF',
 
-    fontSize: 15,
+    fontSize: 15.1,
 
     fontWeight: '700',
   },
   savedList: {
-    gap: 14,
+    gap: 14.4,
 
-    paddingBottom: 8,
+    paddingBottom: 8.3,
   },
   savedCard: {
-    borderRadius: 16,
+    borderRadius: 16.1,
 
-    borderWidth: 1,
+    borderWidth: 1.8,
 
     borderColor: '#3d2380',
 
     backgroundColor: '#1A0D3A',
 
-    padding: 14,
+    padding: 14.7,
   },
   savedCardTop: {
     flexDirection: 'row',
@@ -813,9 +813,9 @@ const styles = StyleSheet.create({
 
     alignItems: 'flex-start',
 
-    marginBottom: 10,
+    marginBottom: 10.1,
 
-    gap: 8,
+    gap: 8.1,
   },
   savedCardMeta: {
     flex: 1,
@@ -823,34 +823,34 @@ const styles = StyleSheet.create({
   savedTo: {
     color: '#f0e8ff',
 
-    fontSize: 15,
+    fontSize: 15.3,
 
     fontWeight: '700',
   },
   savedSub: {
-    marginTop: 4,
+    marginTop: 4.2,
 
     color: '#8B7BAA',
 
-    fontSize: 12,
+    fontSize: 12.3,
 
     fontWeight: '400',
   },
   savedIcons: {
     flexDirection: 'row',
 
-    gap: 6,
+    gap: 6.6,
 
     alignItems: 'center',
   },
   iconBtn: {
-    width: 36,
+    width: 36.7,
 
-    height: 28,
+    height: 28.7,
 
-    borderRadius: 18,
+    borderRadius: 18.6,
 
-    borderWidth: 1,
+    borderWidth: 1.6,
 
     borderColor: '#3d2380',
 
@@ -863,23 +863,23 @@ const styles = StyleSheet.create({
   savedBody: {
     backgroundColor: '#231550',
 
-    borderRadius: 12,
+    borderRadius: 12.8,
 
-    padding: 12,
+    padding: 12.6,
 
-    marginBottom: 10,
+    marginBottom: 10.2,
   },
   savedBodyTxt: {
     color: '#f0e8ff',
 
-    fontSize: 14,
+    fontSize: 14.7,
 
-    lineHeight: 22,
+    lineHeight: 22.2,
   },
   savedFooter: {
     color: '#8b7baa',
 
-    fontSize: 11,
+    fontSize: 11.1,
 
     fontWeight: '600',
   },

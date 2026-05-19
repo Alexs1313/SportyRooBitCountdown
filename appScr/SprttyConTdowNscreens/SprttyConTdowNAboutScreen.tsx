@@ -1,11 +1,8 @@
 import {useNavigation} from '@react-navigation/native';
 import type {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React, {useCallback} from 'react';
-
 import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
-
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-
 import type {RootParamList} from '../SprttyConTdowNroutes/SprttyConTdowNrootParamList';
 import Layout from '../SprttyConTdowNcomponents/SprttyConTdowNLayout';
 
@@ -30,7 +27,7 @@ const AboutScreen = () => {
           <Image source={require('../../assets/i/sportyritcocback.png')} />
           <Text style={styles.backTxt}>Back</Text>
         </Pressable>
-        <Text style={styles.pageTitle}>About RoaBitt Countdown Sporty</Text>
+        <Text style={styles.pageTitle}>About RoaBitt Athletic Countdown</Text>
       </View>
       <View style={styles.headerRule} />
 
@@ -38,10 +35,10 @@ const AboutScreen = () => {
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Our Mission</Text>
           <Text style={styles.body}>
-            RoaBitt Countdown Sporty is your ultimate sports companion — helping
-            you track the events that matter most, celebrate milestones with
-            personalized greetings, discover inspiring sports stories, and test
-            your sports knowledge with fun challenges.
+            RoaBitt Athletic Countdown is your ultimate sports companion —
+            helping you track the events that matter most, celebrate milestones
+            with personalized greetings, discover inspiring sports stories, and
+            test your sports knowledge with fun challenges.
           </Text>
         </View>
 
@@ -60,9 +57,9 @@ const AboutScreen = () => {
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Developer</Text>
           <Text style={styles.body}>
-            Built with passion for sports and technology. Sporty Roo was
-            designed to bring the excitement of athletic events to your
-            fingertips every single day.
+            Built with passion for sports and technology. RoaBitt Athletic
+            Countdown was designed to bring the excitement of athletic events to
+            your fingertips every single day.
           </Text>
         </View>
       </View>
@@ -78,96 +75,96 @@ const styles = StyleSheet.create({
 
     alignSelf: 'flex-start',
 
-    gap: 4,
+    gap: 4.1,
 
     backgroundColor: '#1A0D3A',
 
-    paddingHorizontal: 14,
+    paddingHorizontal: 14.6,
 
-    paddingVertical: 10,
+    paddingVertical: 10.4,
 
-    borderRadius: 12,
+    borderRadius: 12.1,
 
-    borderWidth: 1,
+    borderWidth: 1.1,
 
     borderColor: '#3D2380',
 
-    marginBottom: 12,
+    marginBottom: 12.3,
   },
   backChevron: {
     color: '#ffffff',
 
-    fontSize: 22,
+    fontSize: 22.2,
 
     fontWeight: '700',
 
-    marginTop: -2,
+    marginTop: -2.5,
   },
   backTxt: {
     color: '#F0E8FF',
 
-    fontSize: 14,
+    fontSize: 14.5,
 
     fontWeight: '600',
   },
   pageTitle: {
     color: '#ffffff',
 
-    fontSize: 22,
+    fontSize: 22.3,
 
     fontWeight: '800',
 
-    lineHeight: 28,
+    lineHeight: 28.3,
   },
   headerRule: {
-    height: 1,
+    height: 1.2,
 
     backgroundColor: '#2D1B69',
 
     marginHorizontal: 0,
   },
   scroll: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 20.7,
 
-    paddingTop: 20,
+    paddingTop: 20.5,
   },
   card: {
-    borderRadius: 16,
+    borderRadius: 16.2,
 
-    borderWidth: 1,
+    borderWidth: 1.3,
 
     borderColor: '#3d2380',
 
     backgroundColor: '#1a0d32',
 
-    padding: 16,
+    padding: 16.8,
 
-    marginBottom: 14,
+    marginBottom: 14.8,
   },
   cardTitle: {
     color: '#F5B800',
 
-    fontSize: 14,
+    fontSize: 14.7,
 
     fontWeight: '700',
     // Add margin bottom to the card title
-    marginBottom: 10,
+    marginBottom: 10.5,
   },
   body: {
     color: '#C4B8E0',
 
-    fontSize: 13,
+    fontSize: 13.7,
 
-    lineHeight: 23,
+    lineHeight: 23.3,
   },
   bullet: {
     color: '#C4B8E0',
 
-    fontSize: 13,
+    fontSize: 13.2,
 
-    lineHeight: 24,
+    lineHeight: 24.4,
 
-    marginBottom: 6,
+    marginBottom: 6.8,
   },
   root: {
     flex: 1,
@@ -175,9 +172,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#0d0620',
   },
   topBar: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 18.4,
 
-    paddingBottom: 12,
+    paddingBottom: 12.6,
   },
 });
 

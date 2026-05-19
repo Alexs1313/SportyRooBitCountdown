@@ -226,90 +226,90 @@ const styles = StyleSheet.create({
 
     justifyContent: 'space-between',
 
-    minHeight: 58,
+    minHeight: 58.1,
   },
   titleWrap: {
     flex: 1,
 
-    paddingRight: 12,
+    paddingRight: 12.5,
   },
   scrollFill: {
     flex: 1,
   },
   scroll: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 20.4,
   },
   scrollBodyTop: {
-    paddingTop: 16,
+    paddingTop: 16.6,
   },
   medalEmoji: {
-    fontSize: 72,
+    fontSize: 72.1,
 
     textAlign: 'center',
 
-    marginBottom: 8,
+    marginBottom: 8.4,
   },
   newRecord: {
     color: '#F5B800',
 
-    fontSize: 20,
+    fontSize: 20.1,
 
     fontWeight: '800',
 
     textAlign: 'center',
 
-    marginBottom: 22,
+    marginBottom: 22.3,
   },
   scoreCard: {
-    borderRadius: 18,
+    borderRadius: 18.8,
 
-    borderWidth: 2,
+    borderWidth: 2.7,
 
     borderColor: '#F5B800',
 
     backgroundColor: '#1a0d32',
 
-    padding: 20,
+    padding: 20.8,
 
-    marginBottom: 16,
+    marginBottom: 16.6,
   },
   scoreLabel: {
     color: '#9ca3af',
 
-    fontSize: 11,
+    fontSize: 11.4,
 
     fontWeight: '700',
 
-    letterSpacing: 1,
+    letterSpacing: 1.7,
 
-    marginBottom: 6,
+    marginBottom: 6.5,
 
     textAlign: 'center',
   },
   scoreBig: {
     color: '#F5B800',
 
-    fontSize: 56,
+    fontSize: 56.7,
 
     fontWeight: '900',
 
-    lineHeight: 62,
+    lineHeight: 62.8,
 
     textAlign: 'center',
   },
   scoreSub: {
     color: '#c9bdd9',
 
-    fontSize: 14,
+    fontSize: 14.7,
 
-    marginBottom: 19,
+    marginBottom: 19.8,
 
     textAlign: 'center',
   },
   barTrack: {
-    height: 8,
+    height: 8.2,
 
-    borderRadius: 5,
+    borderRadius: 5.7,
 
     backgroundColor: '#2a1f45',
 
@@ -318,50 +318,50 @@ const styles = StyleSheet.create({
   barFill: {
     height: '100%',
 
-    borderRadius: 5,
+    borderRadius: 5.6,
   },
   reviewCard: {
-    borderRadius: 18,
+    borderRadius: 18.5,
 
     backgroundColor: '#1a0d32',
 
-    padding: 16,
+    padding: 16.1,
 
-    marginBottom: 24,
+    marginBottom: 24.2,
   },
   reviewTitle: {
     color: '#f0e8ff',
 
-    fontSize: 15,
+    fontSize: 15.3,
 
     fontWeight: '700',
 
-    marginBottom: 12,
+    marginBottom: 12.4,
   },
   grid: {
     flexDirection: 'row',
 
     flexWrap: 'wrap',
 
-    gap: 8,
+    gap: 8.4,
 
-    marginBottom: 12,
+    marginBottom: 12.2,
   },
   cell: {
-    width: 36,
+    width: 36.1,
 
-    height: 36,
+    height: 36.1,
 
-    borderRadius: 10,
+    borderRadius: 10.3,
 
-    borderWidth: 2,
+    borderWidth: 2.6,
 
     alignItems: 'center',
 
     justifyContent: 'center',
   },
   cellTxt: {
-    fontSize: 12,
+    fontSize: 12.6,
 
     fontWeight: '500',
 
@@ -374,23 +374,23 @@ const styles = StyleSheet.create({
 
     alignItems: 'center',
 
-    gap: 14,
+    gap: 14.6,
 
-    marginTop: 4,
+    marginTop: 4.7,
   },
   legendItem: {
     flexDirection: 'row',
 
     alignItems: 'center',
 
-    gap: 8,
+    gap: 8.6,
   },
   legendSwatch: {
-    width: 10,
+    width: 10.7,
 
-    height: 10,
+    height: 10.4,
 
-    borderRadius: 3,
+    borderRadius: 3.3,
   },
   legendSwatchGreen: {
     backgroundColor: '#22C55E',
@@ -404,23 +404,23 @@ const styles = StyleSheet.create({
   legendText: {
     color: '#b8afc9',
 
-    fontSize: 13,
+    fontSize: 13.1,
 
     fontWeight: '600',
   },
   bestLine: {
     color: '#8b7baa',
 
-    fontSize: 13,
+    fontSize: 13.8,
 
-    marginTop: 10,
+    marginTop: 10.7,
   },
   primaryOuter: {
-    borderRadius: 16,
+    borderRadius: 16.4,
 
     overflow: 'hidden',
 
-    marginBottom: 12,
+    marginBottom: 12.8,
   },
   primaryGrad: {
     flexDirection: 'row',
@@ -429,41 +429,41 @@ const styles = StyleSheet.create({
 
     justifyContent: 'center',
 
-    gap: 10,
+    gap: 10.2,
 
-    height: 50,
+    height: 50.2,
   },
   primaryIcon: {
     color: '#ffffff',
 
-    fontSize: 18,
+    fontSize: 18.2,
 
     fontWeight: '700',
   },
   primaryTxt: {
     color: '#ffffff',
 
-    fontSize: 16,
+    fontSize: 16.1,
 
     fontWeight: '700',
   },
   secondary: {
     alignItems: 'center',
 
-    paddingVertical: 14,
+    paddingVertical: 14.2,
 
-    borderRadius: 16,
+    borderRadius: 16.1,
 
     backgroundColor: '#1A0D3A',
 
-    borderWidth: 1,
+    borderWidth: 1.6,
 
     borderColor: '#3d2380',
   },
   secondaryTxt: {
     color: '#c9bdd9',
 
-    fontSize: 16,
+    fontSize: 16.7,
 
     fontWeight: '700',
   },

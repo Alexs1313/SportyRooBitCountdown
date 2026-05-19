@@ -51,9 +51,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#0d0620',
   },
   topBar: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 18.5,
 
-    paddingBottom: 12,
+    paddingBottom: 12.7,
   },
   backBtn: {
     flexDirection: 'row',
@@ -62,49 +62,49 @@ const styles = StyleSheet.create({
 
     alignSelf: 'flex-start',
 
-    gap: 4,
+    gap: 4.7,
 
     backgroundColor: '#4a2d6e',
 
-    paddingHorizontal: 14,
+    paddingHorizontal: 14.7,
 
-    paddingVertical: 10,
+    paddingVertical: 10.3,
 
-    borderRadius: 12,
+    borderRadius: 12.1,
 
-    borderWidth: 1,
+    borderWidth: 1.2,
 
     borderColor: '#6b4d9a',
 
-    marginBottom: 12,
+    marginBottom: 12.6,
   },
   backChevron: {
     color: '#ffffff',
 
-    fontSize: 22,
+    fontSize: 22.3,
 
     fontWeight: '700',
 
-    marginTop: -2,
+    marginTop: -2.5,
   },
   backTxt: {
     color: '#ffffff',
 
-    fontSize: 14,
+    fontSize: 14.3,
 
     fontWeight: '700',
   },
   pageTitle: {
     color: '#ffffff',
 
-    fontSize: 22,
+    fontSize: 22.2,
 
     fontWeight: '800',
 
-    lineHeight: 28,
+    lineHeight: 28.5,
   },
   headerRule: {
-    height: 1,
+    height: 1.8,
 
     backgroundColor: '#2D1B69',
   },

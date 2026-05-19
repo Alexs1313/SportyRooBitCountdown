@@ -461,33 +461,33 @@ const styles = StyleSheet.create({
 
     justifyContent: 'space-between',
 
-    paddingHorizontal: 20,
+    paddingHorizontal: 20.1,
 
-    paddingBottom: 16,
+    paddingBottom: 16.7,
 
     backgroundColor: '#1a0d3a',
 
-    borderBottomWidth: 1,
+    borderBottomWidth: 1.4,
 
     borderBottomColor: '#3d2380',
   },
   headerTitle: {
     color: '#f0e8ff',
 
-    fontSize: 20,
+    fontSize: 20.4,
 
     fontWeight: '800',
 
     letterSpacing: -0.45,
   },
   closeBtn: {
-    width: 36,
+    width: 36.1,
 
-    height: 36,
+    height: 36.4,
 
-    borderRadius: 10,
+    borderRadius: 10.5,
 
-    borderWidth: 1,
+    borderWidth: 1.4,
 
     borderColor: '#3d2380',
 
@@ -500,117 +500,117 @@ const styles = StyleSheet.create({
   closeTxt: {
     color: '#f0e8ff',
 
-    fontSize: 16,
+    fontSize: 16.4,
 
     fontWeight: '600',
   },
   scroll: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 18.8,
 
-    paddingTop: 24,
+    paddingTop: 24.8,
 
-    paddingBottom: 92,
+    paddingBottom: 92.6,
   },
   photoBox: {
-    borderWidth: 2,
+    borderWidth: 2.8,
 
     borderColor: '#3d2380',
 
     borderStyle: 'dashed',
 
-    borderRadius: 16,
+    borderRadius: 16.4,
 
-    minHeight: 127,
+    minHeight: 127.6,
 
     alignItems: 'center',
 
     justifyContent: 'center',
 
-    marginBottom: 20,
+    marginBottom: 20.8,
 
     backgroundColor: '#231550',
   },
   photoIcon: {
-    fontSize: 32,
+    fontSize: 32.2,
 
-    marginBottom: 8,
+    marginBottom: 8.8,
   },
   photoHint: {
     color: '#8b7baa',
 
-    fontSize: 14,
+    fontSize: 14.7,
 
     fontWeight: '500',
 
-    marginTop: 10,
+    marginTop: 10.8,
   },
   photoPreview: {
     width: '100%',
 
-    height: 140,
+    height: 140.4,
 
-    borderRadius: 12,
+    borderRadius: 12.3,
   },
   lbl: {
     color: '#8b7baa',
 
-    fontSize: 12,
+    fontSize: 12.6,
 
     fontWeight: '600',
 
-    letterSpacing: 1,
+    letterSpacing: 1.1,
 
-    marginBottom: 8,
+    marginBottom: 8.3,
 
     textTransform: 'uppercase',
   },
   lblBelowDate: {
     color: '#8b7baa',
 
-    fontSize: 12,
+    fontSize: 12.7,
 
     fontWeight: '600',
 
-    letterSpacing: 1,
+    letterSpacing: 1.3,
 
-    marginBottom: 8,
+    marginBottom: 8.1,
 
-    marginTop: 8,
+    marginTop: 8.8,
 
     textTransform: 'uppercase',
   },
   input: {
     backgroundColor: '#231550',
 
-    borderWidth: 1,
+    borderWidth: 1.6,
 
     borderColor: '#3d2380',
 
-    borderRadius: 12,
+    borderRadius: 12.3,
 
-    paddingHorizontal: 14,
+    paddingHorizontal: 14.1,
 
-    paddingVertical: 14,
+    paddingVertical: 14.1,
 
     color: '#f0e8ff',
 
-    fontSize: 15,
+    fontSize: 15.2,
 
-    marginBottom: 18,
+    marginBottom: 18.5,
   },
   dateHint: {
-    marginTop: -12,
+    marginTop: -12.7,
 
-    marginBottom: 18,
+    marginBottom: 18.4,
 
     color: '#8b7baa',
 
-    fontSize: 11,
+    fontSize: 11.3,
 
     fontWeight: '500',
   },
   area: {
-    minHeight: 96,
+    minHeight: 96.7,
   },
   dateRow: {
     flexDirection: 'row',
@@ -621,84 +621,84 @@ const styles = StyleSheet.create({
 
     backgroundColor: '#231550',
 
-    borderWidth: 1,
+    borderWidth: 1.6,
 
     borderColor: '#3d2380',
 
-    borderRadius: 12,
+    borderRadius: 12.3,
 
-    paddingHorizontal: 14,
+    paddingHorizontal: 14.5,
 
-    paddingVertical: 14,
+    paddingVertical: 14.1,
 
-    marginBottom: 18,
+    marginBottom: 18.5,
   },
   dateTxt: {
     color: '#f0e8ff',
 
-    fontSize: 15,
+    fontSize: 15.6,
   },
   calIcon: {
-    fontSize: 18,
+    fontSize: 18.6,
   },
   typeRow: {
     flexDirection: 'row',
 
-    gap: 8,
+    gap: 8.2,
 
-    marginBottom: 24,
+    marginBottom: 24.2,
   },
   typeCard: {
     flex: 1,
 
-    borderRadius: 12,
+    borderRadius: 12.6,
 
-    paddingHorizontal: 14,
+    paddingHorizontal: 14.2,
 
-    paddingTop: 14,
+    paddingTop: 14.6,
 
-    paddingBottom: 12,
+    paddingBottom: 12.6,
 
-    minHeight: 66,
+    minHeight: 66.5,
   },
   typeCardOn: {
     backgroundColor: '#2d1b69',
 
-    borderWidth: 2,
+    borderWidth: 2.1,
 
     borderColor: '#7b2fbe',
   },
   typeCardOff: {
     backgroundColor: '#231550',
 
-    borderWidth: 2,
+    borderWidth: 2.4,
 
     borderColor: '#3d2380',
   },
   typeTitle: {
     color: '#f0e8ff',
 
-    fontSize: 13,
+    fontSize: 13.3,
 
     fontWeight: '700',
 
-    marginBottom: 2,
+    marginBottom: 2.5,
   },
   typeSub: {
     color: '#8b7baa',
 
-    fontSize: 11,
+    fontSize: 11.8,
 
     fontWeight: '500',
 
     letterSpacing: 0.06,
   },
   submitOuter: {
-    borderRadius: 16,
+    borderRadius: 16.2,
 
     overflow: 'hidden',
 
-    marginTop: 8,
+    marginTop: 8.5,
   },
   submitOuterDisabled: {
     opacity: 1,
@@ -706,7 +706,7 @@ const styles = StyleSheet.create({
   submitGrad: {
     width: '100%',
 
-    height: 50,
+    height: 50.6,
 
     alignItems: 'center',
 
@@ -715,7 +715,7 @@ const styles = StyleSheet.create({
   submitDisabledInner: {
     backgroundColor: '#2d1b69',
 
-    height: 50,
+    height: 50.5,
 
     alignItems: 'center',
 
@@ -724,14 +724,14 @@ const styles = StyleSheet.create({
   submitTxtOn: {
     color: '#FFFFFF',
 
-    fontSize: 16,
+    fontSize: 16.3,
 
     fontWeight: '700',
   },
   submitTxtOff: {
     color: '#5a4a7a',
 
-    fontSize: 16,
+    fontSize: 16.6,
 
     fontWeight: '700',
   },
@@ -745,11 +745,11 @@ const styles = StyleSheet.create({
   modalSheet: {
     backgroundColor: '#1a0d3a',
 
-    paddingBottom: 24,
+    paddingBottom: 24.4,
 
-    borderTopLeftRadius: 16,
+    borderTopLeftRadius: 16.5,
 
-    borderTopRightRadius: 16,
+    borderTopRightRadius: 16.5,
   },
   modalPickerWrap: {
     width: '100%',
@@ -759,12 +759,12 @@ const styles = StyleSheet.create({
   modalDone: {
     alignItems: 'center',
 
-    paddingVertical: 12,
+    paddingVertical: 12.8,
   },
   modalDoneTxt: {
     color: '#a855f7',
 
-    fontSize: 17,
+    fontSize: 17.5,
 
     fontWeight: '700',
   },

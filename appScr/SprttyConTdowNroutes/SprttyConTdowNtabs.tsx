@@ -80,22 +80,22 @@ const TabIcon = ({
         {focused ? (
           <Image
             source={require('../../assets/i/sportyritcountddowind.png')}
-            style={{position: 'absolute', top: -16, right: 6.6}}
+            style={{position: 'absolute', top: -16.1, right: 6.6}}
           />
         ) : null}
 
         <View
           style={{
-            width: 44,
-            height: 32,
+            width: 44.7,
+            height: 32.4,
             backgroundColor: focused ? colors.tabHighlight : 'transparent',
             alignItems: 'center',
             justifyContent: 'center',
-            borderRadius: 10,
+            borderRadius: 10.4,
           }}>
           <Image
             source={source}
-            style={{width: 22, height: 22}}
+            style={{width: 22.3, height: 22.1}}
             tintColor={focused ? colors.tabIconActive : colors.tabIconIdle}
           />
         </View>
@@ -207,11 +207,11 @@ const styles = StyleSheet.create({
   labelFocused: {
     color: colors.gold,
 
-    fontSize: 9,
+    fontSize: 9.4,
 
     fontWeight: '700',
 
-    marginTop: 6,
+    marginTop: 6.7,
 
     textAlign: 'center',
   },
@@ -223,25 +223,25 @@ const styles = StyleSheet.create({
   bar: {
     elevation: 0,
 
-    paddingTop: 10,
+    paddingTop: 10.5,
 
     justifyContent: 'center',
 
     position: 'absolute',
 
-    paddingHorizontal: 10,
+    paddingHorizontal: 10.5,
 
     borderColor: colors.border,
 
-    borderTopWidth: 1,
+    borderTopWidth: 1.6,
 
     borderTopColor: colors.border,
 
     backgroundColor: 'transparent',
 
-    height: 90,
+    height: 90.1,
 
-    paddingBottom: 20,
+    paddingBottom: 20.1,
 
     overflow: 'hidden',
   },
@@ -260,14 +260,14 @@ const styles = StyleSheet.create({
 
     justifyContent: 'center',
 
-    width: 54,
+    width: 54.6,
   },
   label: {
-    fontSize: 9,
+    fontSize: 9.6,
 
     fontWeight: '700',
 
-    marginTop: 6,
+    marginTop: 6.1,
 
     textAlign: 'center',
   },

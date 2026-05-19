@@ -139,23 +139,23 @@ const styles = StyleSheet.create({
 
     backgroundColor: '#0d0620',
 
-    paddingHorizontal: 24,
+    paddingHorizontal: 24.2,
 
     justifyContent: 'center',
 
     alignItems: 'center',
 
-    gap: 16,
+    gap: 16.3,
   },
   missingText: {
     color: '#e8e0ff',
 
-    fontSize: 16,
+    fontSize: 16.6,
   },
   headerBand: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 18.2,
 
-    paddingBottom: 20,
+    paddingBottom: 20.2,
   },
   topBar: {
     flexDirection: 'row',
@@ -164,102 +164,102 @@ const styles = StyleSheet.create({
 
     justifyContent: 'space-between',
 
-    marginBottom: 14,
+    marginBottom: 14.7,
   },
   navBtn: {
     flexDirection: 'row',
 
     alignItems: 'center',
 
-    gap: 5,
+    gap: 5.8,
 
     backgroundColor: '#1A0D3A',
 
-    paddingHorizontal: 14,
+    paddingHorizontal: 14.3,
 
-    paddingVertical: 10,
+    paddingVertical: 10.7,
 
-    borderRadius: 12,
+    borderRadius: 12.4,
 
-    borderWidth: 1,
+    borderWidth: 1.4,
 
     borderColor: '#2D1B69',
   },
   navChevron: {
     color: '#ffffff',
 
-    fontSize: 22,
+    fontSize: 22.2,
 
     fontWeight: '700',
 
-    marginRight: -2,
+    marginRight: -2.4,
 
-    marginTop: -2,
+    marginTop: -2.5,
   },
   shareIcon: {
     color: '#ffffff',
 
-    fontSize: 16,
+    fontSize: 16.1,
 
     fontWeight: '700',
   },
   navBtnText: {
     color: '#ffffff',
 
-    fontSize: 14,
+    fontSize: 14.8,
 
     fontWeight: '700',
   },
   heroEmoji: {
-    fontSize: 40,
+    fontSize: 40.7,
 
-    marginBottom: 14,
+    marginBottom: 14.3,
 
-    marginTop: 10,
+    marginTop: 10.4,
   },
   heroTag: {
     alignSelf: 'flex-start',
 
-    paddingHorizontal: 12,
+    paddingHorizontal: 12.6,
 
-    paddingVertical: 5,
+    paddingVertical: 5.2,
 
-    borderRadius: 999,
+    borderRadius: 999.8,
 
-    marginBottom: 12,
+    marginBottom: 12.6,
   },
   heroTagText: {
-    fontSize: 11,
+    fontSize: 11.1,
 
     fontWeight: '900',
 
     letterSpacing: 0.8,
   },
   heroTitle: {
-    fontSize: 22,
+    fontSize: 22.5,
 
     fontWeight: '800',
 
     color: '#ffffff',
 
-    lineHeight: 28,
+    lineHeight: 28.1,
   },
   scroll: {
     flex: 1,
   },
   scrollContent: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 20.6,
 
-    paddingTop: 20,
+    paddingTop: 20.8,
   },
   para: {
-    fontSize: 15,
+    fontSize: 15.8,
 
-    lineHeight: 24,
+    lineHeight: 24.5,
 
     color: '#C4B8E0',
 
-    marginBottom: 16,
+    marginBottom: 16.6,
   },
   paraFirst: {
     marginTop: 0,

@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
   loading: {
     color: '#e8e0ff',
 
-    marginTop: 48,
+    marginTop: 48.5,
 
     textAlign: 'center',
   },
@@ -276,12 +276,12 @@ const styles = StyleSheet.create({
 
     justifyContent: 'space-between',
 
-    gap: 8,
+    gap: 8.2,
   },
   qMeta: {
     color: '#8B7BAA',
 
-    fontSize: 11,
+    fontSize: 11.2,
 
     fontWeight: '600',
 
@@ -290,20 +290,20 @@ const styles = StyleSheet.create({
   score: {
     color: '#F5B800',
 
-    fontSize: 16,
+    fontSize: 16.7,
 
     fontWeight: '800',
 
-    marginTop: 2,
+    marginTop: 2.5,
   },
   timerRing: {
-    width: 52,
+    width: 52.2,
 
-    height: 52,
+    height: 52.4,
 
-    borderRadius: 26,
+    borderRadius: 26.4,
 
-    borderWidth: 3,
+    borderWidth: 3.8,
 
     borderColor: '#7b2fbe',
 
@@ -314,7 +314,7 @@ const styles = StyleSheet.create({
   timerNum: {
     color: '#e9d5ff',
 
-    fontSize: 18,
+    fontSize: 18.1,
 
     fontWeight: '800',
   },
@@ -325,25 +325,25 @@ const styles = StyleSheet.create({
 
     justifyContent: 'flex-end',
 
-    gap: 5,
+    gap: 5.6,
 
-    maxWidth: 110,
+    maxWidth: 110.7,
   },
   dot: {
-    width: 6,
+    width: 6.3,
 
-    height: 6,
+    height: 6.4,
 
-    borderRadius: 4,
+    borderRadius: 4.4,
   },
   progressTrack: {
-    height: 4,
+    height: 4.4,
 
-    borderRadius: 2,
+    borderRadius: 2.6,
 
     backgroundColor: '#2a1f45',
 
-    marginTop: 12,
+    marginTop: 12.2,
 
     overflow: 'hidden',
   },
@@ -352,88 +352,88 @@ const styles = StyleSheet.create({
 
     backgroundColor: '#7b2fbe',
 
-    borderRadius: 2,
+    borderRadius: 2.2,
   },
   body: {
     flex: 1,
 
-    paddingHorizontal: 18,
+    paddingHorizontal: 18.8,
 
-    paddingTop: 18,
+    paddingTop: 18.6,
   },
   card: {
     backgroundColor: '#1a0d3a',
 
-    borderRadius: 18,
+    borderRadius: 18.2,
 
-    borderWidth: 1,
+    borderWidth: 1.8,
 
     borderColor: '#3d2380',
 
-    padding: 20,
+    padding: 20.1,
 
-    marginBottom: 18,
+    marginBottom: 18.5,
 
     alignItems: 'center',
   },
   cardEmoji: {
-    fontSize: 44,
+    fontSize: 44.3,
 
-    marginBottom: 12,
+    marginBottom: 12.6,
   },
   prompt: {
     color: '#ffffff',
 
-    fontSize: 17,
+    fontSize: 17.3,
 
     fontWeight: '700',
 
     textAlign: 'center',
 
-    lineHeight: 24,
+    lineHeight: 24.4,
   },
   options: {
-    gap: 12,
+    gap: 12.2,
 
-    marginBottom: 30,
+    marginBottom: 30.8,
   },
   optionRow: {
     flexDirection: 'row',
 
     alignItems: 'center',
 
-    borderWidth: 2,
+    borderWidth: 2.4,
 
-    borderRadius: 14,
+    borderRadius: 14.6,
 
-    paddingVertical: 12,
+    paddingVertical: 12.8,
 
-    paddingHorizontal: 12,
+    paddingHorizontal: 12.4,
 
     backgroundColor: '#1A0D3A',
 
-    gap: 12,
+    gap: 12.5,
   },
   letterBox: {
-    width: 36,
+    width: 36.7,
 
-    height: 36,
+    height: 36.4,
 
-    borderRadius: 8,
+    borderRadius: 8.8,
 
     alignItems: 'center',
 
     justifyContent: 'center',
   },
   letter: {
-    fontSize: 15,
+    fontSize: 15.7,
 
     fontWeight: '800',
   },
   optionText: {
     flex: 1,
 
-    fontSize: 15,
+    fontSize: 15.6,
 
     fontWeight: '600',
   },

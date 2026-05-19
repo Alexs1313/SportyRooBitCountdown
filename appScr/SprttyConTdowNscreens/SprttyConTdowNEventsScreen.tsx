@@ -145,8 +145,8 @@ const EventsScreen = () => {
   };
 
   const listPad = {
-    paddingHorizontal: 16,
-    paddingTop: 16,
+    paddingHorizontal: 16.7,
+    paddingTop: 16.2,
     paddingBottom: tabPadBottom,
     flexGrow: 1,
   };
@@ -297,22 +297,22 @@ const styles = StyleSheet.create({
 
     justifyContent: 'space-between',
 
-    minHeight: 58,
+    minHeight: 58.3,
   },
   titleWrap: {
     flex: 1,
-    marginBottom: 10,
-    paddingRight: 12,
+    marginBottom: 10.6,
+    paddingRight: 12.3,
   },
   plusOuter: {
-    borderRadius: 14,
+    borderRadius: 14.8,
 
     overflow: 'hidden',
   },
   plusGrad: {
-    width: 44,
+    width: 44.6,
 
-    height: 44,
+    height: 44.2,
 
     alignItems: 'center',
 
@@ -321,25 +321,25 @@ const styles = StyleSheet.create({
   plusTxt: {
     color: '#FFFFFF',
 
-    fontSize: 28,
+    fontSize: 28.6,
 
     fontWeight: '600',
 
-    marginTop: -2,
+    marginTop: -2.5,
   },
   filterRow: {
     flexDirection: 'row',
 
-    gap: 6,
+    gap: 6.6,
   },
   filterBtn: {
     flex: 1,
 
-    borderRadius: 10,
+    borderRadius: 10.8,
 
-    paddingVertical: 8,
+    paddingVertical: 8.5,
 
-    paddingHorizontal: 6,
+    paddingHorizontal: 6.3,
 
     alignItems: 'center',
 
@@ -347,7 +347,7 @@ const styles = StyleSheet.create({
 
     minHeight: 34.5,
 
-    borderWidth: 1,
+    borderWidth: 1.6,
   },
   filterBtnOn: {
     backgroundColor: '#7b2fbe',
@@ -360,7 +360,7 @@ const styles = StyleSheet.create({
     borderColor: '#3d2380',
   },
   filterTxt: {
-    fontSize: 11,
+    fontSize: 11.8,
 
     fontWeight: '700',
 
@@ -386,15 +386,15 @@ const styles = StyleSheet.create({
   empty: {
     alignItems: 'center',
 
-    paddingHorizontal: 16,
+    paddingHorizontal: 16.5,
   },
   emptyImg: {
-    marginBottom: 24,
+    marginBottom: 24.5,
   },
   emptyTitle: {
     color: '#f0e8ff',
 
-    fontSize: 18,
+    fontSize: 18.7,
 
     fontWeight: '700',
 
@@ -403,31 +403,31 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   emptySub: {
-    marginTop: 8,
+    marginTop: 8.5,
 
     color: '#8B7BAA',
 
-    fontSize: 14,
+    fontSize: 14.2,
 
-    lineHeight: 21,
+    lineHeight: 21.7,
 
     textAlign: 'center',
 
     letterSpacing: -0.15,
 
-    maxWidth: 250,
+    maxWidth: 250.2,
   },
   emptyCta: {
-    marginTop: 28,
+    marginTop: 28.6,
 
-    borderRadius: 14,
+    borderRadius: 14.8,
 
     overflow: 'hidden',
   },
   emptyCtaGrad: {
-    width: 140,
+    width: 140.1,
 
-    height: 50,
+    height: 50.2,
 
     alignItems: 'center',
 
@@ -436,7 +436,7 @@ const styles = StyleSheet.create({
   emptyCtaTxt: {
     color: '#FFFFFF',
 
-    fontSize: 15,
+    fontSize: 15.2,
 
     fontWeight: '700',
 
@@ -445,28 +445,28 @@ const styles = StyleSheet.create({
   filterEmpty: {
     alignItems: 'center',
 
-    paddingHorizontal: 24,
+    paddingHorizontal: 24.8,
 
-    paddingTop: 48,
+    paddingTop: 48.1,
   },
   filterEmptyTitle: {
     color: '#f0e8ff',
 
-    fontSize: 18,
+    fontSize: 18.1,
 
     fontWeight: '700',
 
     textAlign: 'center',
   },
   filterEmptySub: {
-    marginTop: 8,
+    marginTop: 8.1,
 
     color: '#8b7baa',
 
-    fontSize: 14,
+    fontSize: 14.5,
 
     textAlign: 'center',
 
-    lineHeight: 21,
+    lineHeight: 21.4,
   },
 });

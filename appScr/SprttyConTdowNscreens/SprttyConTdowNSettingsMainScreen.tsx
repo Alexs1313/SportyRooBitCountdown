@@ -122,7 +122,7 @@ const SettingsMainScreen = () => {
                 iconImage={require('../../assets/i/sportyritcoscnxtpr.png')}
                 onPress={() =>
                   Linking.openURL(
-                    'https://www.termsfeed.com/live/34e7abfe-fbf0-456d-a8b1-939e0155f69e',
+                    'https://www.termsfeed.com/live/4d299e45-6d8a-4be4-9c0b-af8d2b0f428b',
                   )
                 }
                 subtitle="How we handle your data"
@@ -134,10 +134,10 @@ const SettingsMainScreen = () => {
                 iconImage={require('../../assets/i/sportyritcoscnxtra.png')}
                 onPress={() =>
                   Linking.openURL(
-                    'https://apps.apple.com/us/app/roabitt-countdown-sporty/id6770570550',
+                    'https://apps.apple.com/us/app/roabitt-athletic-countdown/id6771005485',
                   )
                 }
-                subtitle="Love App? Tell us!"
+                subtitle="Love the App? Tell us!"
                 title="Rate the App"
               />
               <SettingsRow
@@ -146,7 +146,7 @@ const SettingsMainScreen = () => {
                 iconImage={require('../../assets/i/sportyritcoscnxtshr.png')}
                 onPress={() =>
                   Linking.openURL(
-                    'https://apps.apple.com/us/app/roabitt-countdown-sporty/id6770570550',
+                    'https://apps.apple.com/us/app/roabitt-athletic-countdown/id6771005485',
                   )
                 }
                 subtitle="Spread the sports love"
@@ -200,18 +200,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#0d0620',
   },
   gearEmoji: {
-    fontSize: 22,
+    fontSize: 22.2,
   },
   notifRow: {
     flexDirection: 'row',
 
     alignItems: 'center',
 
-    paddingVertical: 16,
+    paddingVertical: 16.4,
 
-    paddingHorizontal: 14,
+    paddingHorizontal: 14.1,
 
-    gap: 12,
+    gap: 12.6,
   },
   rowText: {
     flex: 1,
@@ -221,11 +221,11 @@ const styles = StyleSheet.create({
   chevron: {
     color: '#6b7280',
 
-    fontSize: 22,
+    fontSize: 22.8,
 
     fontWeight: '300',
 
-    marginLeft: 4,
+    marginLeft: 4.8,
   },
 });
 

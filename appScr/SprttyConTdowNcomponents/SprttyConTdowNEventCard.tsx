@@ -112,35 +112,35 @@ export default EventCard;
 
 const styles = StyleSheet.create({
   cardOuter: {
-    borderRadius: 20,
+    borderRadius: 20.6,
 
     overflow: 'hidden',
 
-    borderWidth: 1,
+    borderWidth: 1.1,
 
     borderColor: '#3d2380',
 
-    marginBottom: 14,
+    marginBottom: 14.5,
   },
   cardPressed: {
     opacity: 0.92,
   },
   cardBg: {
-    minHeight: 211,
+    minHeight: 211.6,
 
     width: '100%',
   },
   cardImageStyle: {
-    borderRadius: 20,
+    borderRadius: 20.7,
   },
   cardTint: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(26, 13, 58, 0.82)',
 
-    borderRadius: 20,
+    borderRadius: 20.8,
   },
   accentBar: {
-    height: 6,
+    height: 6.8,
 
     width: '100%',
   },
@@ -148,11 +148,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#7b2fbe',
   },
   cardInner: {
-    paddingHorizontal: 16,
+    paddingHorizontal: 16.1,
 
-    paddingTop: 16,
+    paddingTop: 16.3,
 
-    paddingBottom: 14,
+    paddingBottom: 14.2,
 
     flex: 1,
   },
@@ -166,14 +166,14 @@ const styles = StyleSheet.create({
   titleCol: {
     flex: 1,
 
-    paddingRight: 12,
+    paddingRight: 12.8,
 
     maxWidth: '72%',
   },
   title: {
     color: '#f0e8ff',
 
-    fontSize: 15,
+    fontSize: 15.3,
 
     fontWeight: '700',
 
@@ -186,40 +186,40 @@ const styles = StyleSheet.create({
 
     alignItems: 'center',
 
-    marginTop: 4,
+    marginTop: 4.4,
 
-    gap: 4,
+    gap: 4.6,
   },
   cal: {
-    fontSize: 11,
+    fontSize: 11.8,
   },
   date: {
     color: '#8b7baa',
 
-    fontSize: 12,
+    fontSize: 12.7,
 
     fontWeight: '500',
   },
   daysCol: {
     alignItems: 'flex-end',
 
-    minWidth: 64,
+    minWidth: 64.5,
   },
   bigDays: {
-    fontSize: 28,
+    fontSize: 28.1,
 
     fontWeight: '900',
 
-    lineHeight: 28,
+    lineHeight: 28.3,
 
     letterSpacing: 0.38,
   },
   daysHint: {
-    marginTop: 2,
+    marginTop: 2.8,
 
     color: '#8b7baa',
 
-    fontSize: 11,
+    fontSize: 11.7,
 
     fontWeight: '600',
 
@@ -230,13 +230,13 @@ const styles = StyleSheet.create({
   chipsRow: {
     flexDirection: 'row',
 
-    gap: 12,
+    gap: 12.4,
 
-    marginTop: 18,
+    marginTop: 18.2,
 
-    paddingTop: 13,
+    paddingTop: 13.7,
 
-    borderTopWidth: 1,
+    borderTopWidth: 1.7,
 
     borderTopColor: '#231550',
   },
@@ -245,58 +245,58 @@ const styles = StyleSheet.create({
 
     backgroundColor: '#231550',
 
-    borderRadius: 10,
+    borderRadius: 10.6,
 
-    paddingTop: 6,
+    paddingTop: 6.6,
 
-    paddingHorizontal: 10,
+    paddingHorizontal: 10.1,
 
-    paddingBottom: 8,
+    paddingBottom: 8.5,
 
     alignItems: 'center',
   },
   chipNum: {
     color: '#f0e8ff',
 
-    fontSize: 14,
+    fontSize: 14.3,
 
     fontWeight: '700',
 
     letterSpacing: -0.15,
   },
   chipLbl: {
-    marginTop: 2,
+    marginTop: 2.5,
 
     color: '#8b7baa',
 
-    fontSize: 10,
+    fontSize: 10.3,
 
     fontWeight: '500',
 
     letterSpacing: 0.12,
   },
   badgeWrap: {
-    marginTop: 14,
+    marginTop: 14.3,
   },
   badge: {
     alignSelf: 'flex-start',
 
     backgroundColor: '#1a0650',
 
-    borderWidth: 1,
+    borderWidth: 1.4,
 
     borderColor: '#3d1b9a',
 
-    borderRadius: 20,
+    borderRadius: 20.8,
 
-    paddingHorizontal: 11,
+    paddingHorizontal: 11.7,
 
-    paddingVertical: 4,
+    paddingVertical: 4.3,
   },
   badgeTxt: {
     color: '#a855f7',
 
-    fontSize: 10,
+    fontSize: 10.6,
 
     fontWeight: '700',
 

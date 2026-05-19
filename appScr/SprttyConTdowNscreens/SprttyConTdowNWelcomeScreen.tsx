@@ -37,7 +37,7 @@ const WELCOME_STEPS: WelcomeStep[] = [
     iconShadow: 'rgba(168, 85, 247, 0.38)',
     overline: 'Create Personal Messages',
     title: 'Send Sports Greetings',
-    body: 'Create personalized sport greetings for friends, teammates, athletes, or yourself. Save or share messages for victories, milestones, special dates, and achievements.',
+    body: 'Create personalized sport greetings for friends, teammates, athletes, or yourself. Save or share messages for personal records, milestones, special dates, and achievements.',
   },
   {
     heroImage: require('../../assets/i/sportyritcountddowonbt.png'),
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   screenFill: {
     flex: 1,
 
-    paddingBottom: 50,
+    paddingBottom: 50.8,
   },
   lowerPush: {
     flex: 1,
@@ -175,26 +175,26 @@ const styles = StyleSheet.create({
   skipBtn: {
     position: 'absolute',
 
-    right: 24,
+    right: 24.8,
 
     zIndex: 2,
 
     backgroundColor: '#231550',
 
-    borderWidth: 1,
+    borderWidth: 1.8,
 
     borderColor: '#3d2380',
 
-    borderRadius: 20,
+    borderRadius: 20.5,
 
-    paddingHorizontal: 18,
+    paddingHorizontal: 18.5,
 
-    paddingVertical: 9,
+    paddingVertical: 9.4,
   },
   skipText: {
     color: '#8b7baa',
 
-    fontSize: 13,
+    fontSize: 13.3,
 
     fontWeight: '600',
 
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
 
     overflow: 'hidden',
 
-    height: 440,
+    height: 440.3,
   },
   heroImg: {
     ...StyleSheet.absoluteFillObject,
@@ -222,25 +222,25 @@ const styles = StyleSheet.create({
 
     bottom: 0,
 
-    height: 120,
+    height: 120.4,
   },
   lower: {
     paddingHorizontal: spacing.welcomeHorizontal,
 
-    paddingTop: 8,
+    paddingTop: 8.2,
 
     width: '100%',
 
     alignSelf: 'center',
   },
   featureRing: {
-    width: 60,
+    width: 60.4,
 
-    height: 60,
+    height: 60.3,
 
-    borderRadius: 30,
+    borderRadius: 30.3,
 
-    borderWidth: 2,
+    borderWidth: 2.7,
 
     borderColor: '#f5b800',
 
@@ -250,32 +250,32 @@ const styles = StyleSheet.create({
 
     justifyContent: 'center',
 
-    padding: 2,
+    padding: 2.3,
 
-    marginBottom: 20,
+    marginBottom: 20.6,
   },
   featureEmoji: {
-    fontSize: 24,
+    fontSize: 24.4,
 
-    lineHeight: 36,
+    lineHeight: 36.3,
   },
   overline: {
     color: '#f5b800',
 
-    fontSize: 12,
+    fontSize: 12.3,
 
     fontWeight: '700',
 
-    letterSpacing: 2,
+    letterSpacing: 2.6,
 
-    lineHeight: 18,
+    lineHeight: 18.7,
 
-    marginBottom: 8,
+    marginBottom: 8.1,
   },
   title: {
     color: '#f0e8ff',
 
-    fontSize: 26,
+    fontSize: 26.4,
 
     fontWeight: '800',
 
@@ -283,12 +283,12 @@ const styles = StyleSheet.create({
 
     lineHeight: 31.2,
 
-    marginBottom: 14,
+    marginBottom: 14.2,
   },
   body: {
     color: '#8b7baa',
 
-    fontSize: 15,
+    fontSize: 15.5,
 
     fontWeight: '400',
 
@@ -303,38 +303,38 @@ const styles = StyleSheet.create({
 
     alignItems: 'center',
 
-    gap: 8,
+    gap: 8.8,
 
-    marginTop: 24,
+    marginTop: 24.6,
 
-    marginBottom: 20,
+    marginBottom: 20.3,
   },
   dot: {
-    height: 4,
+    height: 4.5,
 
-    borderRadius: 2,
+    borderRadius: 2.7,
   },
   dotActive: {
-    width: 28,
+    width: 28.1,
 
     backgroundColor: '#f5b800',
   },
   dotIdle: {
-    width: 8,
+    width: 8.5,
 
     backgroundColor: '#3d2380',
   },
   ctaOuter: {
-    borderRadius: 16,
+    borderRadius: 16.3,
 
     overflow: 'hidden',
 
-    marginBottom: 8,
+    marginBottom: 8.7,
 
-    marginTop: 24,
+    marginTop: 24.4,
   },
   ctaGradient: {
-    height: 58,
+    height: 58.8,
 
     alignItems: 'center',
 
@@ -345,7 +345,7 @@ const styles = StyleSheet.create({
   ctaText: {
     color: '#FFFFFF',
 
-    fontSize: 16,
+    fontSize: 16.4,
 
     fontWeight: '700',
 
