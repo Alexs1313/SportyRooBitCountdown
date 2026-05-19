@@ -2,7 +2,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import Toast from 'react-native-toast-message';
 
-import RootNav from './src/routes/nav';
+import RootNav from './SprttyConTdowNsrc/SprttyConTdowNroutes/SprttyConTdowNnav';
 
 const App = () => {
   return (
