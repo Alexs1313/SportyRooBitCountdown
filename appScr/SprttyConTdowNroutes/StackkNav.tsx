@@ -16,7 +16,7 @@ import type {RootParamList} from './SprttyConTdowNrootParamList';
 
 const Stack = createNativeStackNavigator<RootParamList>();
 
-const RootNav = () => {
+const StackkNav = () => {
   return (
     <Stack.Navigator
       initialRouteName="Splash"
@@ -45,4 +45,4 @@ const RootNav = () => {
   );
 };
 
-export default RootNav;
+export default StackkNav;
